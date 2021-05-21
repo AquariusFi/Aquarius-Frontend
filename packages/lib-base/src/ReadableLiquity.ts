@@ -147,6 +147,13 @@ export interface ReadableLiquity {
   getUniTokenAllowance(address?: string): Promise<Decimal>;
 
   /**
+   * Get the liquidity mining contract's allowance of a holder's Uniswap FTM/LUSD LP tokens.
+   *
+   * @param address - Address holding the Uniswap FTM/LUSD LP tokens.
+   */
+   getLqtyLpTokenAllowance(address?: string): Promise<Decimal>;
+
+  /**
    * Get the remaining AQU that will be collectively rewarded to liquidity miners.
    */
   getRemainingLiquidityMiningLQTYReward(): Promise<Decimal>;

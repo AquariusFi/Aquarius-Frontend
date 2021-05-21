@@ -3,11 +3,11 @@ import { useLiquitySelector } from "@liquity/lib-react";
 
 const selector = ({
   lqtyLpTokenBalance,
-  uniTokenAllowance,
+  lqtyLpTokenAllowance,
   liquidityMiningStakeLqtyLp
 }: LiquityStoreState) => ({
   lqtyLpTokenBalance,
-  uniTokenAllowance,
+  lqtyLpTokenAllowance,
   liquidityMiningStakeLqtyLp
 });
 
@@ -22,7 +22,7 @@ type FarmStakeValidation = {
 };
 
 export const useValidationState = (amount: Decimal): FarmStakeValidation => {
-  const { lqtyLpTokenBalance, uniTokenAllowance, liquidityMiningStakeLqtyLp } = useLiquitySelector(selector);
+  const { lqtyLpTokenBalance, lqtyLpTokenAllowance, liquidityMiningStakeLqtyLp } = useLiquitySelector(selector);
   const isWithdrawing = liquidityMiningStakeLqtyLp.gt(amount);
   const amountChanged = isWithdrawing
     ? liquidityMiningStakeLqtyLp.sub(amount)
@@ -42,7 +42,7 @@ export const useValidationState = (amount: Decimal): FarmStakeValidation => {
     };
   }
 
-  const hasApproved = !uniTokenAllowance.isZero && uniTokenAllowance.gte(amountChanged);
+  const hasApproved = !lqtyLpTokenAllowance.isZero && lqtyLpTokenAllowance.gte(amountChanged);
   const hasEnoughUniToken = !lqtyLpTokenBalance.isZero && lqtyLpTokenBalance.gte(amountChanged);
 
   return {

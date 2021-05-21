@@ -25,7 +25,7 @@ export const Inactive: React.FC = () => {
   return (
     <Card>
       <Heading>
-        Fantom Liquidity Farm
+      Sushi Liquidity Farm
         <Flex sx={{ justifyContent: "flex-end" }}>
           <RemainingLQTY />
         </Flex>

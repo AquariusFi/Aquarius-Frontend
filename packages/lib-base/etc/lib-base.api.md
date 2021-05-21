@@ -24,6 +24,8 @@ export class _CachedReadableLiquity<T extends unknown[]> implements _ReadableLiq
     // (undocumented)
     getLQTYBalance(address?: string, ...extraParams: T): Promise<Decimal>;
     // (undocumented)
+    getLqtyLpTokenAllowance(address?: string, ...extraParams: T): Promise<Decimal>;
+    // (undocumented)
     getLqtyLpTokenBalance(address?: string, ...extraParams: T): Promise<Decimal>;
     // (undocumented)
     getLQTYStake(address?: string, ...extraParams: T): Promise<LQTYStake>;
@@ -278,6 +280,7 @@ export interface LiquityStoreBaseState {
     liquidityMiningStake: Decimal;
     liquidityMiningStakeLqtyLp: Decimal;
     lqtyBalance: Decimal;
+    lqtyLpTokenAllowance: Decimal;
     lqtyLpTokenBalance: Decimal;
     lqtyStake: LQTYStake;
     lusdBalance: Decimal;
@@ -518,6 +521,7 @@ export interface ReadableLiquity {
     getLiquidityMiningStake(address?: string): Promise<Decimal>;
     getLiquidityMiningStakeLqtyLp(address?: string): Promise<Decimal>;
     getLQTYBalance(address?: string): Promise<Decimal>;
+    getLqtyLpTokenAllowance(address?: string): Promise<Decimal>;
     getLqtyLpTokenBalance(address?: string): Promise<Decimal>;
     getLQTYStake(address?: string): Promise<LQTYStake>;
     getLUSDBalance(address?: string): Promise<Decimal>;

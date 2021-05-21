@@ -350,6 +350,17 @@ export class ReadableEthersLiquity implements ReadableLiquity {
     // return lqtyToken.balanceOf(address, { ...overrides }).then(decimalify);
   }
 
+  /** {@inheritDoc @liquity/lib-base#ReadableLiquity.getUniTokenAllowance} */
+  getLqtyLpTokenAllowance(address?: string, overrides?: EthersCallOverrides): Promise<Decimal> {
+    address ??= _requireAddress(this.connection);
+    const { lqtyLPToken, lqtyUnipool } = _getContracts(this.connection);
+
+    return lqtyLPToken.allowance(address, lqtyUnipool.address, { ...overrides }).then(decimalify);
+    // const { lqtyToken } = _getContracts(this.connection);
+
+    // return lqtyToken.balanceOf(address, { ...overrides }).then(decimalify);
+  }
+
   /** @internal */
   async _getRemainingLiquidityMiningLQTYRewardCalculator(
     overrides?: EthersCallOverrides
@@ -749,6 +760,12 @@ class BlockPolledLiquityStoreBasedCache
   getUniTokenAllowance(address?: string, overrides?: EthersCallOverrides): Decimal | undefined {
     if (this._userHit(address, overrides)) {
       return this._store.state.uniTokenAllowance;
+    }
+  }
+
+  getLqtyLpTokenAllowance(address?: string, overrides?: EthersCallOverrides): Decimal | undefined {
+    if (this._userHit(address, overrides)) {
+      return this._store.state.lqtyLpTokenAllowance;
     }
   }
 

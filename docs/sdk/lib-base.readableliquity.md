@@ -28,6 +28,7 @@ Implemented by [EthersLiquity](./lib-ethers.ethersliquity.md)<!-- -->.
 |  [getLiquidityMiningStake(address)](./lib-base.readableliquity.getliquidityminingstake.md) | Get the amount of Uniswap FTM/LUSD LP tokens currently staked by an address in liquidity mining. |
 |  [getLiquidityMiningStakeLqtyLp(address)](./lib-base.readableliquity.getliquidityminingstakelqtylp.md) | Get the amount of Uniswap FTM/LUSD LP tokens currently staked by an address in liquidity mining. |
 |  [getLQTYBalance(address)](./lib-base.readableliquity.getlqtybalance.md) | Get the amount of AQU held by an address. |
+|  [getLqtyLpTokenAllowance(address)](./lib-base.readableliquity.getlqtylptokenallowance.md) | Get the liquidity mining contract's allowance of a holder's Uniswap FTM/LUSD LP tokens. |
 |  [getLqtyLpTokenBalance(address)](./lib-base.readableliquity.getlqtylptokenbalance.md) | Get the amount of Uniswap FTM/LUSD LP tokens held by an address. |
 |  [getLQTYStake(address)](./lib-base.readableliquity.getlqtystake.md) | Get the current state of an AQU Stake. |
 |  [getLUSDBalance(address)](./lib-base.readableliquity.getlusdbalance.md) | Get the amount of aUSD held by an address. |

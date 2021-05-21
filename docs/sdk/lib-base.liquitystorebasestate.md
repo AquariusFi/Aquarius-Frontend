@@ -24,6 +24,7 @@ export interface LiquityStoreBaseState
 |  [liquidityMiningStake](./lib-base.liquitystorebasestate.liquidityminingstake.md) | [Decimal](./lib-base.decimal.md) | Amount of Uniswap FTM/aUSD LP tokens the user has staked in liquidity mining. |
 |  [liquidityMiningStakeLqtyLp](./lib-base.liquitystorebasestate.liquidityminingstakelqtylp.md) | [Decimal](./lib-base.decimal.md) | Amount of Uniswap FTM/aUSD LP tokens the user has staked in liquidity mining. |
 |  [lqtyBalance](./lib-base.liquitystorebasestate.lqtybalance.md) | [Decimal](./lib-base.decimal.md) | User's AQU token balance. |
+|  [lqtyLpTokenAllowance](./lib-base.liquitystorebasestate.lqtylptokenallowance.md) | [Decimal](./lib-base.decimal.md) | The liquidity mining contract's allowance of user's Uniswap FTM/aUSD LP tokens. |
 |  [lqtyLpTokenBalance](./lib-base.liquitystorebasestate.lqtylptokenbalance.md) | [Decimal](./lib-base.decimal.md) | User's Uniswap FTM/aUSD LP token balance. |
 |  [lqtyStake](./lib-base.liquitystorebasestate.lqtystake.md) | [LQTYStake](./lib-base.lqtystake.md) | User's LQTY stake. |
 |  [lusdBalance](./lib-base.liquitystorebasestate.lusdbalance.md) | [Decimal](./lib-base.decimal.md) | User's aUSD token balance. |

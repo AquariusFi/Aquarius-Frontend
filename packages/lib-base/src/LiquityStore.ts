@@ -40,6 +40,9 @@ export interface LiquityStoreBaseState {
   /** The liquidity mining contract's allowance of user's Uniswap FTM/aUSD LP tokens. */
   uniTokenAllowance: Decimal;
 
+  /** The liquidity mining contract's allowance of user's Uniswap FTM/aUSD LP tokens. */
+  lqtyLpTokenAllowance: Decimal;
+
   /** Remaining AQU that will be collectively rewarded to liquidity miners. */
   remainingLiquidityMiningLQTYReward: Decimal;
 
@@ -403,6 +406,13 @@ export abstract class LiquityStore<T = unknown> {
         "uniTokenAllowance",
         baseState.uniTokenAllowance,
         baseStateUpdate.uniTokenAllowance
+      ),
+
+      lqtyLpTokenAllowance: this._updateIfChanged(
+        eq,
+        "lqtyLpTokenAllowance",
+        baseState.lqtyLpTokenAllowance,
+        baseStateUpdate.lqtyLpTokenAllowance
       ),
 
       remainingLiquidityMiningLQTYReward: this._silentlyUpdateIfChanged(

@@ -141,6 +141,8 @@ export class EthersLiquity implements ReadableEthersLiquity, TransactableLiquity
     // (undocumented)
     getLQTYBalance(address?: string, overrides?: EthersCallOverrides): Promise<Decimal>;
     // (undocumented)
+    getLqtyLpTokenAllowance(address?: string, overrides?: EthersCallOverrides): Promise<Decimal>;
+    // (undocumented)
     getLqtyLpTokenBalance(address?: string, overrides?: EthersCallOverrides): Promise<Decimal>;
     // (undocumented)
     getLQTYStake(address?: string, overrides?: EthersCallOverrides): Promise<LQTYStake>;
@@ -461,6 +463,8 @@ export class ReadableEthersLiquity implements ReadableLiquity {
     getLiquidityMiningStakeLqtyLp(address?: string, overrides?: EthersCallOverrides): Promise<Decimal>;
     // (undocumented)
     getLQTYBalance(address?: string, overrides?: EthersCallOverrides): Promise<Decimal>;
+    // (undocumented)
+    getLqtyLpTokenAllowance(address?: string, overrides?: EthersCallOverrides): Promise<Decimal>;
     // (undocumented)
     getLqtyLpTokenBalance(address?: string, overrides?: EthersCallOverrides): Promise<Decimal>;
     // (undocumented)

@@ -46,7 +46,7 @@ export const Active: React.FC = () => {
   return (
     <Card>
       <Heading>
-        Fantom Liquidity Farm
+        Sushi Liquidity Farm
         {!isTransactionPending && (
           <Flex sx={{ justifyContent: "flex-end" }}>
             <RemainingLQTY />

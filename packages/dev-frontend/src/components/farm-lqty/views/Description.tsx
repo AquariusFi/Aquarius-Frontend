@@ -1,7 +1,7 @@
 import React from "react";
 import { Text } from "theme-ui";
 import { useLiquity } from "../../../hooks/LiquityContext";
-import { LP } from "../../../strings";
+import { LP1 } from "../../../strings";
 import { Transaction } from "../../Transaction";
 import { Decimal } from "@liquity/lib-base";
 import { ActionDescription } from "../../ActionDescription";
@@ -22,7 +22,7 @@ export const Description: React.FC<DescriptionProps> = ({ amount }) => {
   if (!hasApproved) {
     return (
       <ActionDescription>
-        <Text>To stake your {LP} tokens you need to allow Aquarius to stake them for you</Text>
+        <Text>To stake your {LP1} tokens you need to allow Aquarius to stake them for you</Text>
       </ActionDescription>
     );
   }
@@ -36,14 +36,14 @@ export const Description: React.FC<DescriptionProps> = ({ amount }) => {
       {isWithdrawing && (
         <Transaction id={transactionId} send={liquity.unstakeLqtyLpTokens.bind(liquity, amountChanged)}>
           <Text>
-            You are unstaking {amountChanged.prettify(4)} {LP}
+            You are unstaking {amountChanged.prettify(4)} {LP1}
           </Text>
         </Transaction>
       )}
       {!isWithdrawing && (
         <Transaction id={transactionId} send={liquity.stakeLqtyLpTokens.bind(liquity, amountChanged)}>
           <Text>
-            You are staking {amountChanged.prettify(4)} {LP}
+            You are staking {amountChanged.prettify(4)} {LP1}
           </Text>
         </Transaction>
       )}

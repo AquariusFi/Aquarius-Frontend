@@ -64,7 +64,7 @@ export const Adjusting: React.FC = () => {
   return (
     <Card>
       <Heading>
-        Fantom Liquidity Farm
+      Sushi Liquidity Farm
         {isDirty && !isTransactionPending && (
           <Button
             variant="titleIcon"

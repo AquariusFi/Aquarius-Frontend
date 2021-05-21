@@ -36,6 +36,7 @@ The constructor for this class is marked as internal. Third-party code should no
 |  [getLiquidityMiningStake(address, overrides)](./lib-ethers.readableethersliquity.getliquidityminingstake.md) |  | Get the amount of Uniswap FTM/LUSD LP tokens currently staked by an address in liquidity mining. |
 |  [getLiquidityMiningStakeLqtyLp(address, overrides)](./lib-ethers.readableethersliquity.getliquidityminingstakelqtylp.md) |  | Get the amount of Uniswap FTM/LUSD LP tokens currently staked by an address in liquidity mining. |
 |  [getLQTYBalance(address, overrides)](./lib-ethers.readableethersliquity.getlqtybalance.md) |  | Get the amount of AQU held by an address. |
+|  [getLqtyLpTokenAllowance(address, overrides)](./lib-ethers.readableethersliquity.getlqtylptokenallowance.md) |  | Get the liquidity mining contract's allowance of a holder's Uniswap FTM/LUSD LP tokens. |
 |  [getLqtyLpTokenBalance(address, overrides)](./lib-ethers.readableethersliquity.getlqtylptokenbalance.md) |  | Get the amount of Uniswap FTM/LUSD LP tokens held by an address. |
 |  [getLQTYStake(address, overrides)](./lib-ethers.readableethersliquity.getlqtystake.md) |  | Get the current state of an AQU Stake. |
 |  [getLUSDBalance(address, overrides)](./lib-ethers.readableethersliquity.getlusdbalance.md) |  | Get the amount of aUSD held by an address. |

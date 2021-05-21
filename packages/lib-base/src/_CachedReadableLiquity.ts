@@ -150,6 +150,13 @@ export class _CachedReadableLiquity<T extends unknown[]>
     );
   }
 
+  async getLqtyLpTokenAllowance(address?: string, ...extraParams: T): Promise<Decimal> {
+    return (
+      this._cache.getLqtyLpTokenAllowance(address, ...extraParams) ??
+      this._readable.getLqtyLpTokenAllowance(address, ...extraParams)
+    );
+  }
+
   async getRemainingLiquidityMiningLQTYReward(...extraParams: T): Promise<Decimal> {
     return (
       this._cache.getRemainingLiquidityMiningLQTYReward(...extraParams) ??

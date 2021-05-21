@@ -352,6 +352,10 @@ export class SubgraphLiquity implements ReadableLiquity, ObservableLiquity {
     throw new Error("Method not implemented.");
   }
 
+  getLqtyLpTokenAllowance(address?: string): Promise<Decimal> {
+    throw new Error("Method not implemented.");
+  }
+
   getRemainingLiquidityMiningLQTYReward(): Promise<Decimal> {
     throw new Error("Method not implemented.");
   }

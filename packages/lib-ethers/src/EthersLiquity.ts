@@ -234,6 +234,11 @@ export class EthersLiquity implements ReadableEthersLiquity, TransactableLiquity
     return this._readable.getUniTokenAllowance(address, overrides);
   }
 
+  /** {@inheritDoc @liquity/lib-base#ReadableLiquity.getLqtyLpTokenAllowance} */
+  getLqtyLpTokenAllowance(address?: string, overrides?: EthersCallOverrides): Promise<Decimal> {
+    return this._readable.getLqtyLpTokenAllowance(address, overrides);
+  }
+
   /** @internal */
   _getRemainingLiquidityMiningLQTYRewardCalculator(
     overrides?: EthersCallOverrides
