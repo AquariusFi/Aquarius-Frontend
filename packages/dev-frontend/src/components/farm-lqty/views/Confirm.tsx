@@ -4,16 +4,16 @@ import { Decimal } from "@liquity/lib-base";
 import { useLiquity } from "../../../hooks/LiquityContext";
 import { Transaction, useMyTransactionState } from "../../Transaction";
 import { useValidationState } from "../context/useValidationState";
-import { useFarmView } from "../context/FarmViewContext";
+import { useFarmViewLp } from "../context/FarmViewContext";
 
 type ConfirmProps = {
   amount: Decimal;
 };
 
-const transactionId = "farm-confirm";
+const transactionId = "farm-confirm-lp";
 
 export const Confirm: React.FC<ConfirmProps> = ({ amount }) => {
-  const { dispatchEvent } = useFarmView();
+  const { dispatchEvent } = useFarmViewLp();
   const {
     liquity: { send: liquity }
   } = useLiquity();

@@ -37,7 +37,7 @@ export const Inactive: React.FC = () => {
           <Paragraph sx={{ mt: 2 }}>
             You can obtain LP tokens by adding liquidity to the{" "}
             <Link href={uniLink(addresses["lusdToken"])} target="_blank">
-            FTM/aUSD pool on Fantom. <Icon name="external-link-alt" size="xs" />
+            FTM/aUSD pool on Sushi. <Icon name="external-link-alt" size="xs" />
             </Link>
           </Paragraph>
         </InfoMessage>

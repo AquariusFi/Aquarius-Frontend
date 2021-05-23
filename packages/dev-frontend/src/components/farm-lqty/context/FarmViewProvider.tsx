@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect, useRef } from "react";
 import { LiquityStoreState, Decimal } from "@liquity/lib-base";
 import { useLiquitySelector } from "@liquity/lib-react";
-import { FarmViewContext } from "./FarmViewContext";
+import { FarmViewContextLp } from "./FarmViewContext";
 import { transitions } from "./transitions";
 import type { FarmView, FarmEvent } from "./transitions";
 
@@ -60,5 +60,5 @@ export const FarmViewProviderLqty: React.FC = props => {
     dispatchEvent
   };
 
-  return <FarmViewContext.Provider value={provider}>{children}</FarmViewContext.Provider>;
+  return <FarmViewContextLp.Provider value={provider}>{children}</FarmViewContextLp.Provider>;
 };

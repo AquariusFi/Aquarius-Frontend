@@ -7,7 +7,7 @@ import { Icon } from "../../../Icon";
 import { LoadingOverlay } from "../../../LoadingOverlay";
 import { useMyTransactionState } from "../../../Transaction";
 import { DisabledEditableRow, StaticRow } from "../../../Trove/Editor";
-import { useFarmView } from "../../context/FarmViewContext";
+import { useFarmViewLp } from "../../context/FarmViewContext";
 import { RemainingLQTY } from "../RemainingLQTY";
 import { ClaimReward } from "./ClaimReward";
 import { UnstakeAndClaim } from "../UnstakeAndClaim";
@@ -25,7 +25,7 @@ const selector = ({
 const transactionId = /farm-/i;
 
 export const Active: React.FC = () => {
-  const { dispatchEvent } = useFarmView();
+  const { dispatchEvent } = useFarmViewLp();
   const {
     liquidityMiningStakeLqtyLp,
     liquidityMiningLQTYLpReward,

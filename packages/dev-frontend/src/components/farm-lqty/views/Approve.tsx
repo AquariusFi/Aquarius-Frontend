@@ -3,17 +3,17 @@ import { Button } from "theme-ui";
 import { Decimal } from "@liquity/lib-base";
 import { useLiquity } from "../../../hooks/LiquityContext";
 import { Transaction, useMyTransactionState } from "../../Transaction";
-import { useFarmView } from "../context/FarmViewContext";
+import { useFarmViewLp } from "../context/FarmViewContext";
 import { useValidationState } from "../context/useValidationState";
 
 type ApproveProps = {
   amount: Decimal;
 };
 
-const transactionId = "farm-approve";
+const transactionId = "farm-approve-lp";
 
 export const Approve: React.FC<ApproveProps> = ({ amount }) => {
-  const { dispatchEvent } = useFarmView();
+  const { dispatchEvent } = useFarmViewLp();
   const {
     liquity: { send: liquity }
   } = useLiquity();
@@ -38,7 +38,7 @@ export const Approve: React.FC<ApproveProps> = ({ amount }) => {
       showFailure="asTooltip"
       tooltipPlacement="bottom"
     >
-      <Button sx={{ width: "60%" }}>Approve FTM/AQU LP</Button>
+      <Button sx={{ width: "60%" }}>Approve SUSHI LP</Button>
     </Transaction>
   );
 };

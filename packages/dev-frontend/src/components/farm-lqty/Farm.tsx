@@ -4,10 +4,10 @@ import { Staking } from "./views/Staking/Staking";
 import { Adjusting } from "./views/Adjusting/Adjusting";
 import { Active } from "./views/Active/Active";
 import { Disabled } from "./views/Disabled/Disabled";
-import { useFarmView } from "./context/FarmViewContext";
+import { useFarmViewLp } from "./context/FarmViewContext";
 
 export const Farm: React.FC = props => {
-  const { view } = useFarmView();
+  const { view } = useFarmViewLp();
 
   switch (view) {
     case "INACTIVE": {

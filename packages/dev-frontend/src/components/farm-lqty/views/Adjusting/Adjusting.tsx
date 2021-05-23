@@ -7,7 +7,7 @@ import { LP1, GT } from "../../../../strings";
 import { Icon } from "../../../Icon";
 import { EditableRow, StaticRow } from "../../../Trove/Editor";
 import { LoadingOverlay } from "../../../LoadingOverlay";
-import { useFarmView } from "../../context/FarmViewContext";
+import { useFarmViewLp } from "../../context/FarmViewContext";
 import { useMyTransactionState } from "../../../Transaction";
 import { Confirm } from "../Confirm";
 import { Description } from "../Description";
@@ -29,7 +29,7 @@ const selector = ({
 const transactionId = /farm-/;
 
 export const Adjusting: React.FC = () => {
-  const { dispatchEvent } = useFarmView();
+  const { dispatchEvent } = useFarmViewLp();
   const {
     liquidityMiningStakeLqtyLp,
     liquidityMiningLQTYLpReward,

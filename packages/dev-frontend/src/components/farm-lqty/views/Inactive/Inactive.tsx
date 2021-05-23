@@ -3,14 +3,14 @@ import { Card, Heading, Box, Flex, Button, Link, Paragraph } from "theme-ui";
 import { useLiquity } from "../../../../hooks/LiquityContext";
 import { Icon } from "../../../Icon";
 import { InfoMessage } from "../../../InfoMessage";
-import { useFarmView } from "../../context/FarmViewContext";
+import { useFarmViewLp } from "../../context/FarmViewContext";
 import { RemainingLQTY } from "../RemainingLQTY";
 import { Yield } from "../Yield";
 
 const uniLink = (lusdAddress: string) => `https://app.sushi.com/add/FTM/${lusdAddress}`;
 
 export const Inactive: React.FC = () => {
-  const { dispatchEvent } = useFarmView();
+  const { dispatchEvent } = useFarmViewLp();
 
   const {
     liquity: {
@@ -37,7 +37,7 @@ export const Inactive: React.FC = () => {
           <Paragraph sx={{ mt: 2 }}>
             You can obtain LP tokens by adding liquidity to the{" "}
             <Link href={uniLink(addresses["lqtyToken"])} target="_blank">
-            FTM/AQU pool on Fantom. <Icon name="external-link-alt" size="xs" />
+            FTM/AQU pool on Sushi. <Icon name="external-link-alt" size="xs" />
             </Link>
           </Paragraph>
         </InfoMessage>

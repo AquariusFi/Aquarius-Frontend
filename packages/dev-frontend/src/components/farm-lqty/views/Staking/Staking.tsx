@@ -5,7 +5,7 @@ import { LP1 } from "../../../../strings";
 import { Icon } from "../../../Icon";
 import { EditableRow, StaticRow } from "../../../Trove/Editor";
 import { LoadingOverlay } from "../../../LoadingOverlay";
-import { useFarmView } from "../../context/FarmViewContext";
+import { useFarmViewLp } from "../../context/FarmViewContext";
 import { useMyTransactionState } from "../../../Transaction";
 import { Confirm } from "../Confirm";
 import { Description } from "../Description";
@@ -18,7 +18,7 @@ const transactionId = /farm-/;
 const selector = ({ totalStakedLqtyLpTokens }: LiquityStoreState) => ({ totalStakedLqtyLpTokens });
 
 export const Staking: React.FC = () => {
-  const { dispatchEvent } = useFarmView();
+  const { dispatchEvent } = useFarmViewLp();
   const { totalStakedLqtyLpTokens } = useLiquitySelector(selector);
 
   const [amount, setAmount] = useState<Decimal>(Decimal.from(0));
