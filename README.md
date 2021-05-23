@@ -19,7 +19,7 @@ multiple front ends, enhancing decentralization.
 
 ## More information
 
-Visit [aquarius.fi](http://aquarius.fi/) to find out more and join the discussion.
+Visit [Aquarius.fi](http://aquarius.fi/) to find out more and join the discussion.
 
 ## About this repo
 
@@ -100,7 +100,7 @@ To obtain the files you need to upload, you need to extract them from a Dev UI D
 
 ```
 docker run --name aquariusf -d --rm \
-  -e FRONTEND_TAG=0x2781fD154358b009abf6280db4Ec066FCC6cb435 \
+  -e FRONTEND_TAG=0x5ad6f8DC2C20530a459bD765e84193101C0423B2 \
   aquariusf/frontend
 ```
 
@@ -161,6 +161,6 @@ Your custom built Dev UI can be configured by putting a file named `config.json`
 
 ```
 {
-  "frontendTag": "0x2781fD154358b009abf6280db4Ec066FCC6cb435"
+  "frontendTag": "0x5ad6f8DC2C20530a459bD765e84193101C0423B2"
 }
 ```
