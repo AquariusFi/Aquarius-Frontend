@@ -32,7 +32,7 @@ export const Yield: React.FC = () => {
   const uniTokenAddress = addresses["uniToken"];
   const secondsRemaining = remainingLiquidityMiningLQTYReward.div(liquidityMiningLQTYRewardRate);
   const daysRemaining = secondsRemaining.div(60 * 60 * 24);
-
+  
   // useEffect(() => {
   //   (async () => {
   //     try {
@@ -84,11 +84,11 @@ export const Yield: React.FC = () => {
         tooltip={
           <Card variant="tooltip" sx={{ minWidth: ["auto", "352px"] }}>
             <Paragraph>
-              An <Text sx={{ fontWeight: "bold" }}>estimate</Text> of the AQU return on staked CAKE
+              An <Text sx={{ fontWeight: "bold" }}>estimate</Text> of the AQU return on staked SUSHI
               LP tokens. The farm runs for 6-weeks, and the return is relative to the time remaining.
             </Paragraph>
             <Paragraph sx={{ fontSize: "12px", fontFamily: "monospace", mt: 2 }}>
-              ($LBSC_REWARDS / $STAKED_CAKE_LP) * 100 ={" "}
+              ($AQU_REWARDS / $STAKED_SUSHI_LP) * 100 ={" "}
               <Text sx={{ fontWeight: "bold" }}> Yield</Text>
             </Paragraph>
             <Paragraph sx={{ fontSize: "12px", fontFamily: "monospace" }}>

@@ -189,7 +189,7 @@ export const WalletConnector: React.FC<WalletConnectorProps> = ({ children, load
               activate(connectionState.connector);
             }}
           >
-            <Text>To use Aquarius, you need to connect your Ethereum account.</Text>
+            <Text>To use Aquarius, you need to connect your FTM account.</Text>
           </RetryDialog>
         </Modal>
       )}

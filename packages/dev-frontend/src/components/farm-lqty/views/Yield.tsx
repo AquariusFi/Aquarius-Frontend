@@ -20,7 +20,7 @@ export const Yield: React.FC = () => {
   const {
     meContract,
     liquity: {
-      connection: { addresses, liquidityMiningLQTYRewardRate }
+      connection: { addresses, liquidityMiningLQTYORewardRate }
     }
   } = useLiquity();
 
@@ -30,7 +30,7 @@ export const Yield: React.FC = () => {
   const hasZeroValue = remainingLiquidityMiningLQTYOReward.isZero || totalStakedLqtyLpTokens.isZero;
   const lqtyTokenAddress = addresses["lqtyToken"];
   const uniTokenAddress = addresses["uniToken"];
-  const secondsRemaining = remainingLiquidityMiningLQTYOReward.div(liquidityMiningLQTYRewardRate);
+  const secondsRemaining = remainingLiquidityMiningLQTYOReward.div(liquidityMiningLQTYORewardRate);
   const daysRemaining = secondsRemaining.div(60 * 60 * 24);
 
   // useEffect(() => {

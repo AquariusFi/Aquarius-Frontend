@@ -94,7 +94,7 @@ export const ReadOnlyStake: React.FC = () => {
             &nbsp;Adjust
           </Button>
 
-          <StakingGainsAction />
+          <StakingGainsAction LQTYGain={LQTYGain} />
         </Flex>
       </Box>
 

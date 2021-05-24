@@ -92,7 +92,8 @@ const deployContracts = async (
     gasPool: await deployContract(deployer, getContractFactory, "GasPool", {
       ...overrides
     }),
-    unipool: await deployContract(deployer, getContractFactory, "Unipool", { ...overrides })
+    unipool: await deployContract(deployer, getContractFactory, "Unipool", { ...overrides }),
+    // unipool: await deployContract(deployer, getContractFactory, "Unipool", { ...overrides }),
   };
 
   return {
@@ -320,6 +321,7 @@ export const deployAndSetupContracts = async (
     bootstrapPeriod: 0,
     totalStabilityPoolLQTYReward: "0",
     liquidityMiningLQTYRewardRate: "0",
+    liquidityMiningLQTYORewardRate: "0",
     _priceFeedIsTestnet,
     _uniTokenIsMock: !wethAddress,
     _isDev,
@@ -347,6 +349,7 @@ export const deployAndSetupContracts = async (
   const bootstrapPeriod = await contracts.troveManager.BOOTSTRAP_PERIOD();
   const totalStabilityPoolLQTYReward = await contracts.communityIssuance.LQTYSupplyCap();
   const liquidityMiningLQTYRewardRate = await contracts.unipool.rewardRate();
+  const liquidityMiningLQTYORewardRate = await contracts.lqtyUnipool.rewardRate();
 
   return {
     ...deployment,
@@ -357,6 +360,9 @@ export const deployAndSetupContracts = async (
     )}`,
     liquidityMiningLQTYRewardRate: `${Decimal.fromBigNumberString(
       liquidityMiningLQTYRewardRate.toHexString()
+    )}`,
+    liquidityMiningLQTYORewardRate: `${Decimal.fromBigNumberString(
+      liquidityMiningLQTYORewardRate.toHexString()
     )}`
   };
 };

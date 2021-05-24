@@ -1,6 +1,6 @@
 import { Button } from "theme-ui";
 
-import { LiquityStoreState } from "@liquity/lib-base";
+import { Decimal,LiquityStoreState } from "@liquity/lib-base";
 import { useLiquitySelector } from "@liquity/lib-react";
 
 import { useLiquity } from "../../hooks/LiquityContext";
@@ -8,7 +8,11 @@ import { useTransactionFunction } from "../Transaction";
 
 const selectLQTYStake = ({ lqtyStake }: LiquityStoreState) => lqtyStake;
 
-export const StakingGainsAction: React.FC = () => {
+type StakingType = {
+  LQTYGain:Decimal | undefined
+}
+
+export const StakingGainsAction: React.FC<StakingType> = ({LQTYGain}) => {
   const { liquity } = useLiquity();
   const { collateralGain, lusdGain } = useLiquitySelector(selectLQTYStake);
 
@@ -18,7 +22,7 @@ export const StakingGainsAction: React.FC = () => {
   );
 
   return (
-    <Button onClick={sendTransaction} disabled={collateralGain.isZero && lusdGain.isZero}>
+    <Button onClick={sendTransaction} disabled={collateralGain.isZero && lusdGain.isZero && LQTYGain && LQTYGain.isZero}>
       Claim gains
     </Button>
   );

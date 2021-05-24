@@ -252,6 +252,7 @@ export interface EthersLiquityConnection extends EthersLiquityConnectionOptional
     readonly deploymentDate: Date;
     // @internal (undocumented)
     readonly _isDev: boolean;
+    readonly liquidityMiningLQTYORewardRate: Decimal;
     readonly liquidityMiningLQTYRewardRate: Decimal;
     // @internal (undocumented)
     readonly _priceFeedIsTestnet: boolean;
