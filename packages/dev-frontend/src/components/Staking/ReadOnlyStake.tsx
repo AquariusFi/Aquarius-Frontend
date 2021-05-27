@@ -18,6 +18,8 @@ import { StakingGainsAction } from "./StakingGainsAction";
 import { Web3Provider } from "@ethersproject/providers";
 import { useWeb3React } from "@web3-react/core";
 
+import { InfoIcon } from "../InfoIcon";
+
 const select = ({ lqtyStake, totalStakedLQTY }: LiquityStoreState) => ({
   lqtyStake,
   totalStakedLQTY
@@ -86,6 +88,16 @@ export const ReadOnlyStake: React.FC = () => {
           amount={LQTYGain?LQTYGain.prettify(4):'0.0000'}
           color={LQTYGain&&LQTYGain.nonZero && "success"}
           unit='AQU'
+          infoIcon={
+            <InfoIcon
+              tooltip={
+                <Card variant="tooltip" sx={{ width: "240px" }}>
+                  The token contract will charge a 5% fee for each AQU transaction. 2.4% of transactions will be sent to the AQU stakers. 2.5% of transactions will be exchanged to LP tokens and added in the AQU-FTM Pool of SushiSwap.
+0.1% of transactions will be burnt.
+                </Card>
+              }
+            />
+          }
         />
 
         <Flex variant="layout.actions">

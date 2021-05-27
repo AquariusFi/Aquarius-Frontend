@@ -50,7 +50,7 @@ export const Yield: React.FC = () => {
       setLqtyPrice(Decimal.from(ethers.utils.formatUnits(res[2], 6)))
     })
 
-    meContract.contractEth.getAmountsOut(ethers.utils.parseUnits('1',18),['0x646f785d325412FAeb7c5D96E10390D611b2Cfe8','0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83','0x04068da6c83afcfa0e13ba15a6696662335d5b75']).then((res:any) => {
+    meContract.contractEth.getAmountsOut(ethers.utils.parseUnits('1',18),['0x41e3dF7f716aB5AF28c1497B354D79342923196a','0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83','0x04068da6c83afcfa0e13ba15a6696662335d5b75']).then((res:any) => {
      
       const fusdPrice = Decimal.from(ethers.utils.formatUnits(res[2], 6));
       // setLqtyPrice(Decimal.fromBigNumberString(res[2]))
