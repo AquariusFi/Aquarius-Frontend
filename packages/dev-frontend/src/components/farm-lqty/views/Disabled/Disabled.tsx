@@ -28,8 +28,8 @@ export const Disabled: React.FC = () => {
       <Box sx={{ p: [2, 3] }}>
         {/* <InfoMessage title="Liquidity farming period has finished"> */}
         {/* <Flex>There are no more AQU rewards left to farm</Flex> */}
-        <InfoMessage title="Coming Soon">
-          <Flex> This LP farming will be available in 12 hours, estimated at 3:00:00 UTC, May 28th, 2021.</Flex>
+        <InfoMessage title="FTM/AQU Coming Soon">
+          <Flex> This LP farming will be available in 12 hours, estimated at 2:00:00 UTC, May 28th, 2021.</Flex>
           
         </InfoMessage>
         {hasStake && (
