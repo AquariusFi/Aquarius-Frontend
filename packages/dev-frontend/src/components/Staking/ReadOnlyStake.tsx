@@ -20,9 +20,10 @@ import { useWeb3React } from "@web3-react/core";
 
 import { InfoIcon } from "../InfoIcon";
 
-const select = ({ lqtyStake, totalStakedLQTY }: LiquityStoreState) => ({
+const select = ({ lqtyStake, totalStakedLQTY, lqtyBalance }: LiquityStoreState) => ({
   lqtyStake,
-  totalStakedLQTY
+  totalStakedLQTY,
+  lqtyBalance
 });
 
 export const ReadOnlyStake: React.FC = () => {
@@ -31,7 +32,7 @@ export const ReadOnlyStake: React.FC = () => {
   } = useLiquity();
   const { changePending, dispatch } = useStakingView();
   const { account } = useWeb3React<Web3Provider>();
-  const { lqtyStake, totalStakedLQTY } = useLiquitySelector(select);
+  const { lqtyStake, totalStakedLQTY,lqtyBalance } = useLiquitySelector(select);
 
   const [LQTYGain, setLQTYGain] = useState<Decimal | undefined>(undefined);
 
@@ -45,7 +46,7 @@ export const ReadOnlyStake: React.FC = () => {
 
   useEffect(() => {
     getPendingLQTYGain();
-  },[])
+  },[totalStakedLQTY,lqtyStake,lqtyBalance])
 
   return (
     <Card>
