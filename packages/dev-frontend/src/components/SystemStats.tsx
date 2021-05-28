@@ -29,7 +29,14 @@ const Balances: React.FC = () => {
 
 const GitHubCommit: React.FC<{ children?: string }> = ({ children }) =>
   children?.match(/[0-9a-f]{40}/) ? (
-    <Link href={`https://github.com/liquity/dev/commit/${children}`}>{children.substr(0, 7)}</Link>
+    <Link href={`https://github.com/AquariusFi/Aquarius-Frontend/commit/${children}`}>{children.substr(0, 7)}</Link>
+  ) : (
+    <>unknown</>
+  );
+
+  const GitHubCommitContract: React.FC<{ children?: string }> = ({ children }) =>
+  children?.match(/[0-9a-f]{40}/) ? (
+    <Link href={`https://github.com/AquariusFi/contracts/commit/${children}`}>{children.substr(0, 7)}</Link>
   ) : (
     <>unknown</>
   );
@@ -158,7 +165,7 @@ export const SystemStats: React.FC<SystemStatsProps> = ({ variant = "info", show
 
       <Box sx={{ mt: 3, opacity: 0.66 }}>
         <Box sx={{ fontSize: 0 }}>
-          Contracts version: <GitHubCommit>{contractsVersion}</GitHubCommit>
+          Contracts version: <GitHubCommitContract>{contractsVersion}</GitHubCommitContract>
         </Box>
         <Box sx={{ fontSize: 0 }}>Deployed: {deploymentDate.toLocaleString()}</Box>
         <Box sx={{ fontSize: 0 }}>
