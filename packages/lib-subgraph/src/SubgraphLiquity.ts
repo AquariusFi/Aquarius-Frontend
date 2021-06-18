@@ -348,11 +348,19 @@ export class SubgraphLiquity implements ReadableLiquity, ObservableLiquity {
     throw new Error("Method not implemented.");
   }
 
+  getLqty1LpTokenBalance(address?: string): Promise<Decimal> {
+    throw new Error("Method not implemented.");
+  }
+
   getUniTokenAllowance(address?: string): Promise<Decimal> {
     throw new Error("Method not implemented.");
   }
 
   getLqtyLpTokenAllowance(address?: string): Promise<Decimal> {
+    throw new Error("Method not implemented.");
+  }
+
+  getLqty1LpTokenAllowance(address?: string): Promise<Decimal> {
     throw new Error("Method not implemented.");
   }
 
@@ -364,11 +372,19 @@ export class SubgraphLiquity implements ReadableLiquity, ObservableLiquity {
     throw new Error("Method not implemented.");
   }
 
+  getRemainingLiquidityMiningLQTY1Reward(): Promise<Decimal> {
+    throw new Error("Method not implemented.");
+  }
+
   getLiquidityMiningStake(address?: string): Promise<Decimal> {
     throw new Error("Method not implemented.");
   }
 
   getLiquidityMiningStakeLqtyLp(address?: string): Promise<Decimal> {
+    throw new Error("Method not implemented.");
+  }
+
+  getLiquidityMiningStakeAusdLp(address?: string): Promise<Decimal> {
     throw new Error("Method not implemented.");
   }
 
@@ -380,11 +396,19 @@ export class SubgraphLiquity implements ReadableLiquity, ObservableLiquity {
     throw new Error("Method not implemented.");
   }
 
+  getLiquidityMiningLQTY1LpReward(address?: string): Promise<Decimal> {
+    throw new Error("Method not implemented.");
+  }
+
   getTotalStakedUniTokens(): Promise<Decimal> {
     throw new Error("Method not implemented.");
   }
 
   getTotalStakedLqtyLpTokens(): Promise<Decimal> {
+    throw new Error("Method not implemented.");
+  }
+
+  getTotalStakedAusdLpTokens(): Promise<Decimal> {
     throw new Error("Method not implemented.");
   }
 

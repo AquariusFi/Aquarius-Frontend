@@ -14,13 +14,21 @@ export class _CachedReadableLiquity<T extends unknown[]> implements _ReadableLiq
     // (undocumented)
     getFrontendStatus(address?: string, ...extraParams: T): Promise<FrontendStatus>;
     // (undocumented)
+    getLiquidityMiningLQTY1LpReward(address?: string, ...extraParams: T): Promise<Decimal>;
+    // (undocumented)
     getLiquidityMiningLQTYLpReward(address?: string, ...extraParams: T): Promise<Decimal>;
     // (undocumented)
     getLiquidityMiningLQTYReward(address?: string, ...extraParams: T): Promise<Decimal>;
     // (undocumented)
     getLiquidityMiningStake(address?: string, ...extraParams: T): Promise<Decimal>;
     // (undocumented)
+    getLiquidityMiningStakeAusdLp(address?: string, ...extraParams: T): Promise<Decimal>;
+    // (undocumented)
     getLiquidityMiningStakeLqtyLp(address?: string, ...extraParams: T): Promise<Decimal>;
+    // (undocumented)
+    getLqty1LpTokenAllowance(address?: string, ...extraParams: T): Promise<Decimal>;
+    // (undocumented)
+    getLqty1LpTokenBalance(address?: string, ...extraParams: T): Promise<Decimal>;
     // (undocumented)
     getLQTYBalance(address?: string, ...extraParams: T): Promise<Decimal>;
     // (undocumented)
@@ -38,6 +46,8 @@ export class _CachedReadableLiquity<T extends unknown[]> implements _ReadableLiq
     // (undocumented)
     getPrice(...extraParams: T): Promise<Decimal>;
     // (undocumented)
+    getRemainingLiquidityMiningLQTY1Reward(...extraParams: T): Promise<Decimal>;
+    // (undocumented)
     getRemainingLiquidityMiningLQTYOReward(...extraParams: T): Promise<Decimal>;
     // (undocumented)
     getRemainingLiquidityMiningLQTYReward(...extraParams: T): Promise<Decimal>;
@@ -49,6 +59,8 @@ export class _CachedReadableLiquity<T extends unknown[]> implements _ReadableLiq
     getTotal(...extraParams: T): Promise<Trove>;
     // (undocumented)
     getTotalRedistributed(...extraParams: T): Promise<Trove>;
+    // (undocumented)
+    getTotalStakedAusdLpTokens(...extraParams: T): Promise<Decimal>;
     // (undocumented)
     getTotalStakedLQTY(...extraParams: T): Promise<Decimal>;
     // (undocumented)
@@ -275,10 +287,14 @@ export interface LiquityStoreBaseState {
     // @internal (undocumented)
     _feesInNormalMode: Fees;
     frontend: FrontendStatus;
+    liquidityMiningLQTY1LpReward: Decimal;
     liquidityMiningLQTYLpReward: Decimal;
     liquidityMiningLQTYReward: Decimal;
     liquidityMiningStake: Decimal;
+    liquidityMiningStakeAusdLp: Decimal;
     liquidityMiningStakeLqtyLp: Decimal;
+    lqty1LpTokenAllowance: Decimal;
+    lqty1LpTokenBalance: Decimal;
     lqtyBalance: Decimal;
     lqtyLpTokenAllowance: Decimal;
     lqtyLpTokenBalance: Decimal;
@@ -288,6 +304,7 @@ export interface LiquityStoreBaseState {
     numberOfTroves: number;
     ownFrontend: FrontendStatus;
     price: Decimal;
+    remainingLiquidityMiningLQTY1Reward: Decimal;
     remainingLiquidityMiningLQTYOReward: Decimal;
     remainingLiquidityMiningLQTYReward: Decimal;
     remainingStabilityPoolLQTYReward: Decimal;
@@ -296,6 +313,7 @@ export interface LiquityStoreBaseState {
     stabilityDeposit: StabilityDeposit;
     total: Trove;
     totalRedistributed: Trove;
+    totalStakedAusdLpTokens: Decimal;
     totalStakedLQTY: Decimal;
     totalStakedLqtyLpTokens: Decimal;
     totalStakedUniTokens: Decimal;
@@ -516,10 +534,14 @@ export interface ReadableLiquity {
     getCollateralSurplusBalance(address?: string): Promise<Decimal>;
     getFees(): Promise<Fees>;
     getFrontendStatus(address?: string): Promise<FrontendStatus>;
+    getLiquidityMiningLQTY1LpReward(address?: string): Promise<Decimal>;
     getLiquidityMiningLQTYLpReward(address?: string): Promise<Decimal>;
     getLiquidityMiningLQTYReward(address?: string): Promise<Decimal>;
     getLiquidityMiningStake(address?: string): Promise<Decimal>;
+    getLiquidityMiningStakeAusdLp(address?: string): Promise<Decimal>;
     getLiquidityMiningStakeLqtyLp(address?: string): Promise<Decimal>;
+    getLqty1LpTokenAllowance(address?: string): Promise<Decimal>;
+    getLqty1LpTokenBalance(address?: string): Promise<Decimal>;
     getLQTYBalance(address?: string): Promise<Decimal>;
     getLqtyLpTokenAllowance(address?: string): Promise<Decimal>;
     getLqtyLpTokenBalance(address?: string): Promise<Decimal>;
@@ -528,12 +550,14 @@ export interface ReadableLiquity {
     getLUSDInStabilityPool(): Promise<Decimal>;
     getNumberOfTroves(): Promise<number>;
     getPrice(): Promise<Decimal>;
+    getRemainingLiquidityMiningLQTY1Reward(): Promise<Decimal>;
     getRemainingLiquidityMiningLQTYOReward(): Promise<Decimal>;
     getRemainingLiquidityMiningLQTYReward(): Promise<Decimal>;
     getRemainingStabilityPoolLQTYReward(): Promise<Decimal>;
     getStabilityDeposit(address?: string): Promise<StabilityDeposit>;
     getTotal(): Promise<Trove>;
     getTotalRedistributed(): Promise<Trove>;
+    getTotalStakedAusdLpTokens(): Promise<Decimal>;
     getTotalStakedLQTY(): Promise<Decimal>;
     getTotalStakedLqtyLpTokens(): Promise<Decimal>;
     getTotalStakedUniTokens(): Promise<Decimal>;

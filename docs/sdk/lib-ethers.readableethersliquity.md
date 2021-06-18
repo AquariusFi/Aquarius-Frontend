@@ -31,10 +31,14 @@ The constructor for this class is marked as internal. Third-party code should no
 |  [getCollateralSurplusBalance(address, overrides)](./lib-ethers.readableethersliquity.getcollateralsurplusbalance.md) |  | Get the amount of leftover collateral available for withdrawal by an address. |
 |  [getFees(overrides)](./lib-ethers.readableethersliquity.getfees.md) |  | Get a calculator for current fees. |
 |  [getFrontendStatus(address, overrides)](./lib-ethers.readableethersliquity.getfrontendstatus.md) |  | Check whether an address is registered as a Aquarius frontend, and what its kickback rate is. |
+|  [getLiquidityMiningLQTY1LpReward(address, overrides)](./lib-ethers.readableethersliquity.getliquiditymininglqty1lpreward.md) |  | Get the amount of AQU earned by an address through mining liquidity. |
 |  [getLiquidityMiningLQTYLpReward(address, overrides)](./lib-ethers.readableethersliquity.getliquiditymininglqtylpreward.md) |  | Get the amount of AQU earned by an address through mining liquidity. |
 |  [getLiquidityMiningLQTYReward(address, overrides)](./lib-ethers.readableethersliquity.getliquiditymininglqtyreward.md) |  | Get the amount of AQU earned by an address through mining liquidity. |
 |  [getLiquidityMiningStake(address, overrides)](./lib-ethers.readableethersliquity.getliquidityminingstake.md) |  | Get the amount of Uniswap FTM/LUSD LP tokens currently staked by an address in liquidity mining. |
+|  [getLiquidityMiningStakeAusdLp(address, overrides)](./lib-ethers.readableethersliquity.getliquidityminingstakeausdlp.md) |  | Get the amount of Uniswap FTM/LUSD LP tokens currently staked by an address in liquidity mining. |
 |  [getLiquidityMiningStakeLqtyLp(address, overrides)](./lib-ethers.readableethersliquity.getliquidityminingstakelqtylp.md) |  | Get the amount of Uniswap FTM/LUSD LP tokens currently staked by an address in liquidity mining. |
+|  [getLqty1LpTokenAllowance(address, overrides)](./lib-ethers.readableethersliquity.getlqty1lptokenallowance.md) |  | Get the liquidity mining contract's allowance of a holder's Uniswap FTM/LUSD LP tokens. |
+|  [getLqty1LpTokenBalance(address, overrides)](./lib-ethers.readableethersliquity.getlqty1lptokenbalance.md) |  | Get the amount of Uniswap FTM/LUSD LP tokens held by an address. |
 |  [getLQTYBalance(address, overrides)](./lib-ethers.readableethersliquity.getlqtybalance.md) |  | Get the amount of AQU held by an address. |
 |  [getLqtyLpTokenAllowance(address, overrides)](./lib-ethers.readableethersliquity.getlqtylptokenallowance.md) |  | Get the liquidity mining contract's allowance of a holder's Uniswap FTM/LUSD LP tokens. |
 |  [getLqtyLpTokenBalance(address, overrides)](./lib-ethers.readableethersliquity.getlqtylptokenbalance.md) |  | Get the amount of Uniswap FTM/LUSD LP tokens held by an address. |
@@ -43,12 +47,14 @@ The constructor for this class is marked as internal. Third-party code should no
 |  [getLUSDInStabilityPool(overrides)](./lib-ethers.readableethersliquity.getlusdinstabilitypool.md) |  | Get the total amount of aUSD currently deposited in the Stability Pool. |
 |  [getNumberOfTroves(overrides)](./lib-ethers.readableethersliquity.getnumberoftroves.md) |  | Get number of Troves that are currently open. |
 |  [getPrice(overrides)](./lib-ethers.readableethersliquity.getprice.md) |  | Get the current price of the native currency (e.g. Ether) in USD. |
+|  [getRemainingLiquidityMiningLQTY1Reward(overrides)](./lib-ethers.readableethersliquity.getremainingliquiditymininglqty1reward.md) |  | Get the remaining AQU that will be collectively rewarded to liquidity miners. |
 |  [getRemainingLiquidityMiningLQTYOReward(overrides)](./lib-ethers.readableethersliquity.getremainingliquiditymininglqtyoreward.md) |  | Get the remaining AQU that will be collectively rewarded to liquidity miners. |
 |  [getRemainingLiquidityMiningLQTYReward(overrides)](./lib-ethers.readableethersliquity.getremainingliquiditymininglqtyreward.md) |  | Get the remaining AQU that will be collectively rewarded to liquidity miners. |
 |  [getRemainingStabilityPoolLQTYReward(overrides)](./lib-ethers.readableethersliquity.getremainingstabilitypoollqtyreward.md) |  | Get the remaining AQU that will be collectively rewarded to stability depositors. |
 |  [getStabilityDeposit(address, overrides)](./lib-ethers.readableethersliquity.getstabilitydeposit.md) |  | Get the current state of a Stability Deposit. |
 |  [getTotal(overrides)](./lib-ethers.readableethersliquity.gettotal.md) |  | Get the total amount of collateral and debt in the Aquarius system. |
 |  [getTotalRedistributed(overrides)](./lib-ethers.readableethersliquity.gettotalredistributed.md) |  | Get the total collateral and debt per stake that has been liquidated through redistribution. |
+|  [getTotalStakedAusdLpTokens(overrides)](./lib-ethers.readableethersliquity.gettotalstakedausdlptokens.md) |  | Get the total amount of Uniswap FTM/LUSD LP tokens currently staked in liquidity mining. |
 |  [getTotalStakedLQTY(overrides)](./lib-ethers.readableethersliquity.gettotalstakedlqty.md) |  | Get the total amount of AQU currently staked. |
 |  [getTotalStakedLqtyLpTokens(overrides)](./lib-ethers.readableethersliquity.gettotalstakedlqtylptokens.md) |  | Get the total amount of Uniswap FTM/LUSD LP tokens currently staked in liquidity mining. |
 |  [getTotalStakedUniTokens(overrides)](./lib-ethers.readableethersliquity.gettotalstakedunitokens.md) |  | Get the total amount of Uniswap FTM/LUSD LP tokens currently staked in liquidity mining. |

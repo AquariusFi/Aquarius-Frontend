@@ -106,6 +106,7 @@ export class BlockPolledLiquityStore extends LiquityStore<BlockPolledLiquityStor
       createFees,
       calculateRemainingLQTY,
       calculateRemainingLQTYO,
+      calculateRemainingLQTY1,
       ...baseState
     } = await promiseAllValues({
       blockTimestamp: _getBlockTimestamp(this.connection, blockTag),
@@ -114,6 +115,9 @@ export class BlockPolledLiquityStore extends LiquityStore<BlockPolledLiquityStor
         blockTag
       }),
       calculateRemainingLQTYO: this._readable._getRemainingLiquidityMiningLQTYORewardCalculator({
+        blockTag
+      }),
+      calculateRemainingLQTY1: this._readable._getRemainingLiquidityMiningLQTY1RewardCalculator({
         blockTag
       }),
 
@@ -126,6 +130,7 @@ export class BlockPolledLiquityStore extends LiquityStore<BlockPolledLiquityStor
       _riskiestTroveBeforeRedistribution: this._getRiskiestTroveBeforeRedistribution({ blockTag }),
       totalStakedUniTokens: this._readable.getTotalStakedUniTokens({ blockTag }),
       totalStakedLqtyLpTokens: this._readable.getTotalStakedLqtyLpTokens({ blockTag }),
+      totalStakedAusdLpTokens: this._readable.getTotalStakedAusdLpTokens({ blockTag }),
       remainingStabilityPoolLQTYReward: this._readable.getRemainingStabilityPoolLQTYReward({
         blockTag
       }),
@@ -141,14 +146,20 @@ export class BlockPolledLiquityStore extends LiquityStore<BlockPolledLiquityStor
             lqtyBalance: this._readable.getLQTYBalance(userAddress, { blockTag }),
             uniTokenBalance: this._readable.getUniTokenBalance(userAddress, { blockTag }),
             lqtyLpTokenBalance: this._readable.getLqtyLpTokenBalance(userAddress, { blockTag }),
+            lqty1LpTokenBalance: this._readable.getLqty1LpTokenBalance(userAddress, { blockTag }),
             uniTokenAllowance: this._readable.getUniTokenAllowance(userAddress, { blockTag }),
             lqtyLpTokenAllowance: this._readable.getLqtyLpTokenAllowance(userAddress, { blockTag }),
+            lqty1LpTokenAllowance: this._readable.getLqty1LpTokenAllowance(userAddress, { blockTag }),
             liquidityMiningStake: this._readable.getLiquidityMiningStake(userAddress, { blockTag }),
             liquidityMiningStakeLqtyLp: this._readable.getLiquidityMiningStakeLqtyLp(userAddress, { blockTag }),
+            liquidityMiningStakeAusdLp: this._readable.getLiquidityMiningStakeAusdLp(userAddress, { blockTag }),
             liquidityMiningLQTYReward: this._readable.getLiquidityMiningLQTYReward(userAddress, {
               blockTag
             }),
             liquidityMiningLQTYLpReward: this._readable.getLiquidityMiningLQTYLpReward(userAddress, {
+              blockTag
+            }),
+            liquidityMiningLQTY1LpReward: this._readable.getLiquidityMiningLQTY1LpReward(userAddress, {
               blockTag
             }),
             collateralSurplusBalance: this._readable.getCollateralSurplusBalance(userAddress, {
@@ -167,12 +178,16 @@ export class BlockPolledLiquityStore extends LiquityStore<BlockPolledLiquityStor
             lqtyBalance: Decimal.ZERO,
             uniTokenBalance: Decimal.ZERO,
             lqtyLpTokenBalance: Decimal.ZERO,
+            lqty1LpTokenBalance: Decimal.ZERO,
             uniTokenAllowance: Decimal.ZERO,
             lqtyLpTokenAllowance: Decimal.ZERO,
+            lqty1LpTokenAllowance: Decimal.ZERO,
             liquidityMiningStake: Decimal.ZERO,
             liquidityMiningStakeLqtyLp: Decimal.ZERO,
+            liquidityMiningStakeAusdLp: Decimal.ZERO,
             liquidityMiningLQTYReward: Decimal.ZERO,
             liquidityMiningLQTYLpReward: Decimal.ZERO,
+            liquidityMiningLQTY1LpReward: Decimal.ZERO,
             collateralSurplusBalance: Decimal.ZERO,
             troveBeforeRedistribution: new TroveWithPendingRedistribution(
               AddressZero,
@@ -195,7 +210,8 @@ export class BlockPolledLiquityStore extends LiquityStore<BlockPolledLiquityStor
         ...baseState,
         _feesInNormalMode: createFees(blockTimestamp, false),
         remainingLiquidityMiningLQTYReward: calculateRemainingLQTY(blockTimestamp),
-        remainingLiquidityMiningLQTYOReward: calculateRemainingLQTYO(blockTimestamp)
+        remainingLiquidityMiningLQTYOReward: calculateRemainingLQTYO(blockTimestamp),
+        remainingLiquidityMiningLQTY1Reward: calculateRemainingLQTY1(blockTimestamp)
       },
       {
         blockTag,

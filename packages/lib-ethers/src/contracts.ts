@@ -173,6 +173,8 @@ export interface _LiquityContracts {
   uniToken: IERC20 | ERC20Mock;
   lqtyUnipool: Unipool;
   lqtyLPToken: IERC20 | ERC20Mock;
+  spookypool: Unipool;
+  spookyLPToken: IERC20 | ERC20Mock;
 }
 
 /** @internal */
@@ -211,7 +213,9 @@ const getAbi = (priceFeedIsTestnet: boolean, uniTokenIsMock: boolean): LiquityCo
   unipool: unipoolAbi,
   uniToken: uniTokenIsMock ? erc20MockAbi : iERC20Abi,
   lqtyUnipool: unipoolAbi,
-  lqtyLPToken: uniTokenIsMock ? erc20MockAbi : iERC20Abi
+  lqtyLPToken: uniTokenIsMock ? erc20MockAbi : iERC20Abi,
+  spookypool: unipoolAbi,
+  spookyLPToken: uniTokenIsMock ? erc20MockAbi : iERC20Abi
 });
 
 const mapLiquityContracts = <T, U>(
@@ -232,6 +236,7 @@ export interface _LiquityDeploymentJSON {
   readonly totalStabilityPoolLQTYReward: string;
   readonly liquidityMiningLQTYRewardRate: string;
   readonly liquidityMiningLQTYORewardRate: string;
+  readonly liquidityMiningLQTY1RewardRate: string;
   readonly _priceFeedIsTestnet: boolean;
   readonly _uniTokenIsMock: boolean;
   readonly _isDev: boolean;

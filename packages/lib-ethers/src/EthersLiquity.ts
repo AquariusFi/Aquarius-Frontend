@@ -229,6 +229,11 @@ export class EthersLiquity implements ReadableEthersLiquity, TransactableLiquity
     return this._readable.getLqtyLpTokenBalance(address, overrides);
   }
 
+  /** {@inheritDoc @liquity/lib-base#ReadableLiquity.getLqty1LpTokenBalance} */
+  getLqty1LpTokenBalance(address?: string, overrides?: EthersCallOverrides): Promise<Decimal> {
+    return this._readable.getLqty1LpTokenBalance(address, overrides);
+  }
+
   /** {@inheritDoc @liquity/lib-base#ReadableLiquity.getUniTokenAllowance} */
   getUniTokenAllowance(address?: string, overrides?: EthersCallOverrides): Promise<Decimal> {
     return this._readable.getUniTokenAllowance(address, overrides);
@@ -237,6 +242,11 @@ export class EthersLiquity implements ReadableEthersLiquity, TransactableLiquity
   /** {@inheritDoc @liquity/lib-base#ReadableLiquity.getLqtyLpTokenAllowance} */
   getLqtyLpTokenAllowance(address?: string, overrides?: EthersCallOverrides): Promise<Decimal> {
     return this._readable.getLqtyLpTokenAllowance(address, overrides);
+  }
+
+  /** {@inheritDoc @liquity/lib-base#ReadableLiquity.getLqty1LpTokenAllowance} */
+  getLqty1LpTokenAllowance(address?: string, overrides?: EthersCallOverrides): Promise<Decimal> {
+    return this._readable.getLqty1LpTokenAllowance(address, overrides);
   }
 
   /** @internal */
@@ -252,6 +262,12 @@ export class EthersLiquity implements ReadableEthersLiquity, TransactableLiquity
     return this._readable._getRemainingLiquidityMiningLQTYRewardCalculator(overrides);
   }
 
+  _getRemainingLiquidityMiningLQTY1RewardCalculator(
+    overrides?: EthersCallOverrides
+  ): Promise<(blockTimestamp: number) => Decimal> {
+    return this._readable._getRemainingLiquidityMiningLQTYRewardCalculator(overrides);
+  }
+
   /** {@inheritDoc @liquity/lib-base#ReadableLiquity.getRemainingLiquidityMiningLQTYReward} */
   getRemainingLiquidityMiningLQTYReward(overrides?: EthersCallOverrides): Promise<Decimal> {
     return this._readable.getRemainingLiquidityMiningLQTYReward(overrides);
@@ -259,6 +275,11 @@ export class EthersLiquity implements ReadableEthersLiquity, TransactableLiquity
 
   /** {@inheritDoc @liquity/lib-base#ReadableLiquity.getRemainingLiquidityMiningLQTYReward} */
   getRemainingLiquidityMiningLQTYOReward(overrides?: EthersCallOverrides): Promise<Decimal> {
+    return this._readable.getRemainingLiquidityMiningLQTYReward(overrides);
+  }
+
+  /** {@inheritDoc @liquity/lib-base#ReadableLiquity.getRemainingLiquidityMiningLQTYReward} */
+  getRemainingLiquidityMiningLQTY1Reward(overrides?: EthersCallOverrides): Promise<Decimal> {
     return this._readable.getRemainingLiquidityMiningLQTYReward(overrides);
   }
 
@@ -272,6 +293,11 @@ export class EthersLiquity implements ReadableEthersLiquity, TransactableLiquity
     return this._readable.getLiquidityMiningStakeLqtyLp(address, overrides);
   }
 
+  /** {@inheritDoc @liquity/lib-base#ReadableLiquity.getLiquidityMiningStake} */
+  getLiquidityMiningStakeAusdLp(address?: string, overrides?: EthersCallOverrides): Promise<Decimal> {
+    return this._readable.getLiquidityMiningStakeAusdLp(address, overrides);
+  }
+
   /** {@inheritDoc @liquity/lib-base#ReadableLiquity.getTotalStakedUniTokens} */
   getTotalStakedUniTokens(overrides?: EthersCallOverrides): Promise<Decimal> {
     return this._readable.getTotalStakedUniTokens(overrides);
@@ -282,6 +308,11 @@ export class EthersLiquity implements ReadableEthersLiquity, TransactableLiquity
     return this._readable.getTotalStakedLqtyLpTokens(overrides);
   }
 
+  /** {@inheritDoc @liquity/lib-base#ReadableLiquity.getTotalStakedAusdLpTokens} */
+  getTotalStakedAusdLpTokens(overrides?: EthersCallOverrides): Promise<Decimal> {
+    return this._readable.getTotalStakedAusdLpTokens(overrides);
+  }
+
   /** {@inheritDoc @liquity/lib-base#ReadableLiquity.getLiquidityMiningLQTYReward} */
   getLiquidityMiningLQTYReward(address?: string, overrides?: EthersCallOverrides): Promise<Decimal> {
     return this._readable.getLiquidityMiningLQTYReward(address, overrides);
@@ -290,6 +321,11 @@ export class EthersLiquity implements ReadableEthersLiquity, TransactableLiquity
   /** {@inheritDoc @liquity/lib-base#ReadableLiquity.getLiquidityMiningLQTYLpReward} */
   getLiquidityMiningLQTYLpReward(address?: string, overrides?: EthersCallOverrides): Promise<Decimal> {
     return this._readable.getLiquidityMiningLQTYLpReward(address, overrides);
+  }
+
+  /** {@inheritDoc @liquity/lib-base#ReadableLiquity.getLiquidityMiningLQTY1LpReward} */
+  getLiquidityMiningLQTY1LpReward(address?: string, overrides?: EthersCallOverrides): Promise<Decimal> {
+    return this._readable.getLiquidityMiningLQTY1LpReward(address, overrides);
   }
 
   /** {@inheritDoc @liquity/lib-base#ReadableLiquity.getCollateralSurplusBalance} */

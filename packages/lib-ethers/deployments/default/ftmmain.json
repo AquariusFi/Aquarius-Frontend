@@ -6,6 +6,7 @@
   "totalStabilityPoolLQTYReward": "32000000",
   "liquidityMiningLQTYRewardRate": "0.05787037037037037",
   "liquidityMiningLQTYORewardRate": "0.377346524606798579",
+  "liquidityMiningLQTY1RewardRate": "0.007330246913580246",
   "_priceFeedIsTestnet": false,
   "_uniTokenIsMock": false,
   "_isDev": false,
@@ -29,6 +30,8 @@
     "multiTroveGetter": "0xE2AdE6A96447c32c6b8088f5e3b4651Fba8332a8",
     "uniToken": "0x97Bc7FB4F3D3F7749A7A3a0953974dcD1AF89713",
     "lqtyUnipool": "0x9549A2C45537fca361BFABF1351588a1A348Ecb5",
-    "lqtyLPToken": "0x7B63e44749884f33cb688F4870dD44dEC1195A9B"
+    "lqtyLPToken": "0x7B63e44749884f33cb688F4870dD44dEC1195A9B",
+    "spookypool": "0xDf598b84330f77CE290BAA6ecEDD181d6FeE6fec",
+    "spookyLPToken": "0xcC27383D75843F7bB24B772C81E3614911527C27"
   }
 }

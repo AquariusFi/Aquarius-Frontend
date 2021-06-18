@@ -29,6 +29,7 @@ The constructor for this class is marked as internal. Third-party code should no
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
+|  [\_getRemainingLiquidityMiningLQTY1RewardCalculator(overrides)](./lib-ethers.ethersliquity._getremainingliquiditymininglqty1rewardcalculator.md) |  |  |
 |  [\_getRemainingLiquidityMiningLQTYORewardCalculator(overrides)](./lib-ethers.ethersliquity._getremainingliquiditymininglqtyorewardcalculator.md) |  |  |
 |  [adjustTrove(params, maxBorrowingRate, overrides)](./lib-ethers.ethersliquity.adjusttrove.md) |  | Adjust existing Trove by changing its collateral, debt, or both. |
 |  [approveLqtyLpTokens(allowance, overrides)](./lib-ethers.ethersliquity.approvelqtylptokens.md) |  | Allow the liquidity mining contract to use Uniswap FTM/aUSD LP tokens for [staking](./lib-base.transactableliquity.stakeunitokens.md)<!-- -->. |
@@ -44,10 +45,14 @@ The constructor for this class is marked as internal. Third-party code should no
 |  [getCollateralSurplusBalance(address, overrides)](./lib-ethers.ethersliquity.getcollateralsurplusbalance.md) |  | Get the amount of leftover collateral available for withdrawal by an address. |
 |  [getFees(overrides)](./lib-ethers.ethersliquity.getfees.md) |  | Get a calculator for current fees. |
 |  [getFrontendStatus(address, overrides)](./lib-ethers.ethersliquity.getfrontendstatus.md) |  | Check whether an address is registered as a Aquarius frontend, and what its kickback rate is. |
+|  [getLiquidityMiningLQTY1LpReward(address, overrides)](./lib-ethers.ethersliquity.getliquiditymininglqty1lpreward.md) |  | Get the amount of AQU earned by an address through mining liquidity. |
 |  [getLiquidityMiningLQTYLpReward(address, overrides)](./lib-ethers.ethersliquity.getliquiditymininglqtylpreward.md) |  | Get the amount of AQU earned by an address through mining liquidity. |
 |  [getLiquidityMiningLQTYReward(address, overrides)](./lib-ethers.ethersliquity.getliquiditymininglqtyreward.md) |  | Get the amount of AQU earned by an address through mining liquidity. |
 |  [getLiquidityMiningStake(address, overrides)](./lib-ethers.ethersliquity.getliquidityminingstake.md) |  | Get the amount of Uniswap FTM/LUSD LP tokens currently staked by an address in liquidity mining. |
+|  [getLiquidityMiningStakeAusdLp(address, overrides)](./lib-ethers.ethersliquity.getliquidityminingstakeausdlp.md) |  | Get the amount of Uniswap FTM/LUSD LP tokens currently staked by an address in liquidity mining. |
 |  [getLiquidityMiningStakeLqtyLp(address, overrides)](./lib-ethers.ethersliquity.getliquidityminingstakelqtylp.md) |  | Get the amount of Uniswap FTM/LUSD LP tokens currently staked by an address in liquidity mining. |
+|  [getLqty1LpTokenAllowance(address, overrides)](./lib-ethers.ethersliquity.getlqty1lptokenallowance.md) |  | Get the liquidity mining contract's allowance of a holder's Uniswap FTM/LUSD LP tokens. |
+|  [getLqty1LpTokenBalance(address, overrides)](./lib-ethers.ethersliquity.getlqty1lptokenbalance.md) |  | Get the amount of Uniswap FTM/LUSD LP tokens held by an address. |
 |  [getLQTYBalance(address, overrides)](./lib-ethers.ethersliquity.getlqtybalance.md) |  | Get the amount of AQU held by an address. |
 |  [getLqtyLpTokenAllowance(address, overrides)](./lib-ethers.ethersliquity.getlqtylptokenallowance.md) |  | Get the liquidity mining contract's allowance of a holder's Uniswap FTM/LUSD LP tokens. |
 |  [getLqtyLpTokenBalance(address, overrides)](./lib-ethers.ethersliquity.getlqtylptokenbalance.md) |  | Get the amount of Uniswap FTM/LUSD LP tokens held by an address. |
@@ -56,12 +61,14 @@ The constructor for this class is marked as internal. Third-party code should no
 |  [getLUSDInStabilityPool(overrides)](./lib-ethers.ethersliquity.getlusdinstabilitypool.md) |  | Get the total amount of aUSD currently deposited in the Stability Pool. |
 |  [getNumberOfTroves(overrides)](./lib-ethers.ethersliquity.getnumberoftroves.md) |  | Get number of Troves that are currently open. |
 |  [getPrice(overrides)](./lib-ethers.ethersliquity.getprice.md) |  | Get the current price of the native currency (e.g. Ether) in USD. |
+|  [getRemainingLiquidityMiningLQTY1Reward(overrides)](./lib-ethers.ethersliquity.getremainingliquiditymininglqty1reward.md) |  | Get the remaining AQU that will be collectively rewarded to liquidity miners. |
 |  [getRemainingLiquidityMiningLQTYOReward(overrides)](./lib-ethers.ethersliquity.getremainingliquiditymininglqtyoreward.md) |  | Get the remaining AQU that will be collectively rewarded to liquidity miners. |
 |  [getRemainingLiquidityMiningLQTYReward(overrides)](./lib-ethers.ethersliquity.getremainingliquiditymininglqtyreward.md) |  | Get the remaining AQU that will be collectively rewarded to liquidity miners. |
 |  [getRemainingStabilityPoolLQTYReward(overrides)](./lib-ethers.ethersliquity.getremainingstabilitypoollqtyreward.md) |  | Get the remaining AQU that will be collectively rewarded to stability depositors. |
 |  [getStabilityDeposit(address, overrides)](./lib-ethers.ethersliquity.getstabilitydeposit.md) |  | Get the current state of a Stability Deposit. |
 |  [getTotal(overrides)](./lib-ethers.ethersliquity.gettotal.md) |  | Get the total amount of collateral and debt in the Aquarius system. |
 |  [getTotalRedistributed(overrides)](./lib-ethers.ethersliquity.gettotalredistributed.md) |  | Get the total collateral and debt per stake that has been liquidated through redistribution. |
+|  [getTotalStakedAusdLpTokens(overrides)](./lib-ethers.ethersliquity.gettotalstakedausdlptokens.md) |  | Get the total amount of Uniswap FTM/LUSD LP tokens currently staked in liquidity mining. |
 |  [getTotalStakedLQTY(overrides)](./lib-ethers.ethersliquity.gettotalstakedlqty.md) |  | Get the total amount of AQU currently staked. |
 |  [getTotalStakedLqtyLpTokens(overrides)](./lib-ethers.ethersliquity.gettotalstakedlqtylptokens.md) |  | Get the total amount of Uniswap FTM/LUSD LP tokens currently staked in liquidity mining. |
 |  [getTotalStakedUniTokens(overrides)](./lib-ethers.ethersliquity.gettotalstakedunitokens.md) |  | Get the total amount of Uniswap FTM/LUSD LP tokens currently staked in liquidity mining. |

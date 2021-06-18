@@ -27,6 +27,7 @@ Exposed through [ReadableEthersLiquity.connection](./lib-ethers.readableethersli
 |  [bootstrapPeriod](./lib-ethers.ethersliquityconnection.bootstrapperiod.md) | number | Time period (in seconds) after <code>deploymentDate</code> during which redemptions are disabled. |
 |  [chainId](./lib-ethers.ethersliquityconnection.chainid.md) | number | Chain ID of the connected network. |
 |  [deploymentDate](./lib-ethers.ethersliquityconnection.deploymentdate.md) | Date | Date when the Aquarius contracts were deployed. |
+|  [liquidityMiningLQTY1RewardRate](./lib-ethers.ethersliquityconnection.liquiditymininglqty1rewardrate.md) | [Decimal](./lib-base.decimal.md) | Amount of LQTY collectively rewarded to stakers of the liquidity mining pool per second. |
 |  [liquidityMiningLQTYORewardRate](./lib-ethers.ethersliquityconnection.liquiditymininglqtyorewardrate.md) | [Decimal](./lib-base.decimal.md) | Amount of LQTY collectively rewarded to stakers of the liquidity mining pool per second. |
 |  [liquidityMiningLQTYRewardRate](./lib-ethers.ethersliquityconnection.liquiditymininglqtyrewardrate.md) | [Decimal](./lib-base.decimal.md) | Amount of LQTY collectively rewarded to stakers of the liquidity mining pool per second. |
 |  [provider](./lib-ethers.ethersliquityconnection.provider.md) | [EthersProvider](./lib-ethers.ethersprovider.md) | Ethers <code>Provider</code> used for connecting to the network. |

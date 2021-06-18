@@ -19,10 +19,14 @@ export interface LiquityStoreBaseState
 |  [accountBalance](./lib-base.liquitystorebasestate.accountbalance.md) | [Decimal](./lib-base.decimal.md) | User's native currency balance (e.g. Ether). |
 |  [collateralSurplusBalance](./lib-base.liquitystorebasestate.collateralsurplusbalance.md) | [Decimal](./lib-base.decimal.md) | Amount of leftover collateral available for withdrawal to the user. |
 |  [frontend](./lib-base.liquitystorebasestate.frontend.md) | [FrontendStatus](./lib-base.frontendstatus.md) | Status of currently used frontend. |
+|  [liquidityMiningLQTY1LpReward](./lib-base.liquitystorebasestate.liquiditymininglqty1lpreward.md) | [Decimal](./lib-base.decimal.md) | Amount of AQU the user has earned through mining liquidity. |
 |  [liquidityMiningLQTYLpReward](./lib-base.liquitystorebasestate.liquiditymininglqtylpreward.md) | [Decimal](./lib-base.decimal.md) | Amount of AQU the user has earned through mining liquidity. |
 |  [liquidityMiningLQTYReward](./lib-base.liquitystorebasestate.liquiditymininglqtyreward.md) | [Decimal](./lib-base.decimal.md) | Amount of AQU the user has earned through mining liquidity. |
 |  [liquidityMiningStake](./lib-base.liquitystorebasestate.liquidityminingstake.md) | [Decimal](./lib-base.decimal.md) | Amount of Uniswap FTM/aUSD LP tokens the user has staked in liquidity mining. |
+|  [liquidityMiningStakeAusdLp](./lib-base.liquitystorebasestate.liquidityminingstakeausdlp.md) | [Decimal](./lib-base.decimal.md) | Amount of Uniswap FTM/aUSD LP tokens the user has staked in liquidity mining. |
 |  [liquidityMiningStakeLqtyLp](./lib-base.liquitystorebasestate.liquidityminingstakelqtylp.md) | [Decimal](./lib-base.decimal.md) | Amount of Uniswap FTM/aUSD LP tokens the user has staked in liquidity mining. |
+|  [lqty1LpTokenAllowance](./lib-base.liquitystorebasestate.lqty1lptokenallowance.md) | [Decimal](./lib-base.decimal.md) | The liquidity mining contract's allowance of user's Uniswap FTM/aUSD LP tokens. |
+|  [lqty1LpTokenBalance](./lib-base.liquitystorebasestate.lqty1lptokenbalance.md) | [Decimal](./lib-base.decimal.md) | User's Uniswap FTM/aUSD LP token balance. |
 |  [lqtyBalance](./lib-base.liquitystorebasestate.lqtybalance.md) | [Decimal](./lib-base.decimal.md) | User's AQU token balance. |
 |  [lqtyLpTokenAllowance](./lib-base.liquitystorebasestate.lqtylptokenallowance.md) | [Decimal](./lib-base.decimal.md) | The liquidity mining contract's allowance of user's Uniswap FTM/aUSD LP tokens. |
 |  [lqtyLpTokenBalance](./lib-base.liquitystorebasestate.lqtylptokenbalance.md) | [Decimal](./lib-base.decimal.md) | User's Uniswap FTM/aUSD LP token balance. |
@@ -32,12 +36,14 @@ export interface LiquityStoreBaseState
 |  [numberOfTroves](./lib-base.liquitystorebasestate.numberoftroves.md) | number | Number of Troves that are currently open. |
 |  [ownFrontend](./lib-base.liquitystorebasestate.ownfrontend.md) | [FrontendStatus](./lib-base.frontendstatus.md) | Status of user's own frontend. |
 |  [price](./lib-base.liquitystorebasestate.price.md) | [Decimal](./lib-base.decimal.md) | Current price of the native currency (e.g. Ether) in USD. |
+|  [remainingLiquidityMiningLQTY1Reward](./lib-base.liquitystorebasestate.remainingliquiditymininglqty1reward.md) | [Decimal](./lib-base.decimal.md) | Remaining AQU that will be collectively rewarded to liquidity miners. |
 |  [remainingLiquidityMiningLQTYOReward](./lib-base.liquitystorebasestate.remainingliquiditymininglqtyoreward.md) | [Decimal](./lib-base.decimal.md) | Remaining AQU that will be collectively rewarded to liquidity miners. |
 |  [remainingLiquidityMiningLQTYReward](./lib-base.liquitystorebasestate.remainingliquiditymininglqtyreward.md) | [Decimal](./lib-base.decimal.md) | Remaining AQU that will be collectively rewarded to liquidity miners. |
 |  [remainingStabilityPoolLQTYReward](./lib-base.liquitystorebasestate.remainingstabilitypoollqtyreward.md) | [Decimal](./lib-base.decimal.md) | Remaining AQU that will be collectively rewarded to stability depositors. |
 |  [stabilityDeposit](./lib-base.liquitystorebasestate.stabilitydeposit.md) | [StabilityDeposit](./lib-base.stabilitydeposit.md) | User's stability deposit. |
 |  [total](./lib-base.liquitystorebasestate.total.md) | [Trove](./lib-base.trove.md) | Total collateral and debt in the Aquarius system. |
 |  [totalRedistributed](./lib-base.liquitystorebasestate.totalredistributed.md) | [Trove](./lib-base.trove.md) | Total collateral and debt per stake that has been liquidated through redistribution. |
+|  [totalStakedAusdLpTokens](./lib-base.liquitystorebasestate.totalstakedausdlptokens.md) | [Decimal](./lib-base.decimal.md) | Total amount of Uniswap FTM/aUSD LP tokens currently staked in liquidity mining. |
 |  [totalStakedLQTY](./lib-base.liquitystorebasestate.totalstakedlqty.md) | [Decimal](./lib-base.decimal.md) | Total amount of AQU currently staked. |
 |  [totalStakedLqtyLpTokens](./lib-base.liquitystorebasestate.totalstakedlqtylptokens.md) | [Decimal](./lib-base.decimal.md) | Total amount of Uniswap FTM/aUSD LP tokens currently staked in liquidity mining. |
 |  [totalStakedUniTokens](./lib-base.liquitystorebasestate.totalstakedunitokens.md) | [Decimal](./lib-base.decimal.md) | Total amount of Uniswap FTM/aUSD LP tokens currently staked in liquidity mining. |

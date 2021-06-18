@@ -322,6 +322,7 @@ export const deployAndSetupContracts = async (
     totalStabilityPoolLQTYReward: "0",
     liquidityMiningLQTYRewardRate: "0",
     liquidityMiningLQTYORewardRate: "0",
+    liquidityMiningLQTY1RewardRate: "0",
     _priceFeedIsTestnet,
     _uniTokenIsMock: !wethAddress,
     _isDev,
@@ -350,6 +351,7 @@ export const deployAndSetupContracts = async (
   const totalStabilityPoolLQTYReward = await contracts.communityIssuance.LQTYSupplyCap();
   const liquidityMiningLQTYRewardRate = await contracts.unipool.rewardRate();
   const liquidityMiningLQTYORewardRate = await contracts.lqtyUnipool.rewardRate();
+  const liquidityMiningLQTY1RewardRate = await contracts.spookypool.rewardRate();
 
   return {
     ...deployment,
@@ -363,6 +365,9 @@ export const deployAndSetupContracts = async (
     )}`,
     liquidityMiningLQTYORewardRate: `${Decimal.fromBigNumberString(
       liquidityMiningLQTYORewardRate.toHexString()
+    )}`,
+    liquidityMiningLQTY1RewardRate: `${Decimal.fromBigNumberString(
+      liquidityMiningLQTY1RewardRate.toHexString()
     )}`
   };
 };

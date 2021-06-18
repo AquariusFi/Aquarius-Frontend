@@ -22,6 +22,7 @@ import { StabilityViewProvider } from "./components/Stability/context/StabilityV
 import { StakingViewProvider } from "./components/Staking/context/StakingViewProvider";
 import { FarmViewProvider } from "./components/Farm/context/FarmViewProvider";
 import { FarmViewProviderLqty } from "./components/farm-lqty/context/FarmViewProvider";
+import { FarmViewProviderSpooky } from "./components/farm-spooky/context/FarmViewProvider";
 
 type LiquityFrontendProps = {
   loader?: React.ReactNode;
@@ -47,7 +48,8 @@ export const LiquityFrontend: React.FC<LiquityFrontendProps> = ({ loader }) => {
           <StabilityViewProvider>
             <StakingViewProvider>
               <FarmViewProvider>
-              <FarmViewProviderLqty>
+                <FarmViewProviderLqty>
+                <FarmViewProviderSpooky>
                 <Flex sx={{ flexDirection: "column", minHeight: "100%" }}>
                   <Header>
                     <UserAccount />
@@ -78,7 +80,8 @@ export const LiquityFrontend: React.FC<LiquityFrontendProps> = ({ loader }) => {
                       </Route>
                     </Switch>
                   </Container>
-                  </Flex>
+                    </Flex>
+                    </FarmViewProviderSpooky>
                   </FarmViewProviderLqty>
               </FarmViewProvider>
             </StakingViewProvider>

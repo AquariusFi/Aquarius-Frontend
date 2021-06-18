@@ -58,7 +58,7 @@ export const Yield: React.FC = () => {
         const totalSupply = Decimal.fromBigNumberString(res);
       
         meContract.contractCakeLp.getReserves().then((res: any) => {
-          const fusdNum = Decimal.fromBigNumberString(res[0]);
+          const fusdNum = Decimal.fromBigNumberString(res[1]);
           const fu = fusdPrice.mul(fusdNum);
           const total = fu.mul(2);
           setUniLpPrice(total.div(totalSupply))

@@ -137,7 +137,14 @@ export interface ReadableLiquity {
    *
    * @param address - Address whose balance should be retrieved.
    */
-   getLqtyLpTokenBalance(address?: string): Promise<Decimal>;
+  getLqtyLpTokenBalance(address?: string): Promise<Decimal>;
+  
+  /**
+   * Get the amount of Uniswap FTM/LUSD LP tokens held by an address.
+   *
+   * @param address - Address whose balance should be retrieved.
+   */
+   getLqty1LpTokenBalance(address?: string): Promise<Decimal>;
 
   /**
    * Get the liquidity mining contract's allowance of a holder's Uniswap FTM/LUSD LP tokens.
@@ -151,7 +158,14 @@ export interface ReadableLiquity {
    *
    * @param address - Address holding the Uniswap FTM/LUSD LP tokens.
    */
-   getLqtyLpTokenAllowance(address?: string): Promise<Decimal>;
+  getLqtyLpTokenAllowance(address?: string): Promise<Decimal>;
+  
+  /**
+   * Get the liquidity mining contract's allowance of a holder's Uniswap FTM/LUSD LP tokens.
+   *
+   * @param address - Address holding the Uniswap FTM/LUSD LP tokens.
+   */
+   getLqty1LpTokenAllowance(address?: string): Promise<Decimal>;
 
   /**
    * Get the remaining AQU that will be collectively rewarded to liquidity miners.
@@ -161,7 +175,12 @@ export interface ReadableLiquity {
   /**
    * Get the remaining AQU that will be collectively rewarded to liquidity miners.
    */
-   getRemainingLiquidityMiningLQTYOReward(): Promise<Decimal>;
+  getRemainingLiquidityMiningLQTYOReward(): Promise<Decimal>;
+  
+  /**
+   * Get the remaining AQU that will be collectively rewarded to liquidity miners.
+   */
+   getRemainingLiquidityMiningLQTY1Reward(): Promise<Decimal>;
 
   /**
    * Get the amount of Uniswap FTM/LUSD LP tokens currently staked by an address in liquidity mining.
@@ -175,7 +194,14 @@ export interface ReadableLiquity {
    *
    * @param address - Address whose LP stake should be retrieved.
    */
-   getLiquidityMiningStakeLqtyLp(address?: string): Promise<Decimal>;
+  getLiquidityMiningStakeLqtyLp(address?: string): Promise<Decimal>;
+  
+  /**
+   * Get the amount of Uniswap FTM/LUSD LP tokens currently staked by an address in liquidity mining.
+   *
+   * @param address - Address whose LP stake should be retrieved.
+   */
+   getLiquidityMiningStakeAusdLp(address?: string): Promise<Decimal>;
 
   /**
    * Get the total amount of Uniswap FTM/LUSD LP tokens currently staked in liquidity mining.
@@ -185,7 +211,12 @@ export interface ReadableLiquity {
   /**
    * Get the total amount of Uniswap FTM/LUSD LP tokens currently staked in liquidity mining.
    */
-   getTotalStakedLqtyLpTokens(): Promise<Decimal>;
+  getTotalStakedLqtyLpTokens(): Promise<Decimal>;
+  
+  /**
+   * Get the total amount of Uniswap FTM/LUSD LP tokens currently staked in liquidity mining.
+   */
+   getTotalStakedAusdLpTokens(): Promise<Decimal>;
 
   /**
    * Get the amount of AQU earned by an address through mining liquidity.
@@ -199,7 +230,14 @@ export interface ReadableLiquity {
    *
    * @param address - Address whose AQU reward should be retrieved.
    */
-   getLiquidityMiningLQTYLpReward(address?: string): Promise<Decimal>;
+  getLiquidityMiningLQTYLpReward(address?: string): Promise<Decimal>;
+  
+  /**
+   * Get the amount of AQU earned by an address through mining liquidity.
+   *
+   * @param address - Address whose AQU reward should be retrieved.
+   */
+   getLiquidityMiningLQTY1LpReward(address?: string): Promise<Decimal>;
 
   /**
    * Get the amount of leftover collateral available for withdrawal by an address.

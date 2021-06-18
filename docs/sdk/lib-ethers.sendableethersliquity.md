@@ -24,6 +24,7 @@ export declare class SendableEthersLiquity implements SendableLiquity<EthersTran
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
 |  [adjustTrove(params, maxBorrowingRate, overrides)](./lib-ethers.sendableethersliquity.adjusttrove.md) |  | Adjust existing Trove by changing its collateral, debt, or both. |
+|  [approveLqty1LpTokens(allowance, overrides)](./lib-ethers.sendableethersliquity.approvelqty1lptokens.md) |  | Allow the liquidity mining contract to use Uniswap FTM/aUSD LP tokens for [staking](./lib-base.transactableliquity.stakeunitokens.md)<!-- -->. |
 |  [approveLqtyLpTokens(allowance, overrides)](./lib-ethers.sendableethersliquity.approvelqtylptokens.md) |  | Allow the liquidity mining contract to use Uniswap FTM/aUSD LP tokens for [staking](./lib-base.transactableliquity.stakeunitokens.md)<!-- -->. |
 |  [approveUniTokens(allowance, overrides)](./lib-ethers.sendableethersliquity.approveunitokens.md) |  | Allow the liquidity mining contract to use Uniswap FTM/aUSD LP tokens for [staking](./lib-base.transactableliquity.stakeunitokens.md)<!-- -->. |
 |  [borrowLUSD(amount, maxBorrowingRate, overrides)](./lib-ethers.sendableethersliquity.borrowlusd.md) |  | Adjust existing Trove by borrowing more aUSD. |
@@ -33,6 +34,7 @@ export declare class SendableEthersLiquity implements SendableLiquity<EthersTran
 |  [depositLUSDInStabilityPool(amount, frontendTag, overrides)](./lib-ethers.sendableethersliquity.depositlusdinstabilitypool.md) |  | Make a new Stability Deposit, or top up existing one. |
 |  [exitLiquidityMining(overrides)](./lib-ethers.sendableethersliquity.exitliquiditymining.md) |  | Withdraw all staked LP tokens from liquidity mining and claim reward. |
 |  [exitLiquidityMiningLqty(overrides)](./lib-ethers.sendableethersliquity.exitliquiditymininglqty.md) |  | Withdraw all staked LP tokens from liquidity mining and claim reward. |
+|  [exitLiquidityMiningLqty1(overrides)](./lib-ethers.sendableethersliquity.exitliquiditymininglqty1.md) |  | Withdraw all staked LP tokens from liquidity mining and claim reward. |
 |  [liquidate(address, overrides)](./lib-ethers.sendableethersliquity.liquidate.md) |  | Liquidate one or more undercollateralized Troves. |
 |  [liquidateUpTo(maximumNumberOfTrovesToLiquidate, overrides)](./lib-ethers.sendableethersliquity.liquidateupto.md) |  | Liquidate the least collateralized Troves up to a maximum number. |
 |  [openTrove(params, maxBorrowingRate, overrides)](./lib-ethers.sendableethersliquity.opentrove.md) |  | Open a new Trove by depositing collateral and borrowing aUSD. |
@@ -42,15 +44,18 @@ export declare class SendableEthersLiquity implements SendableLiquity<EthersTran
 |  [sendLQTY(toAddress, amount, overrides)](./lib-ethers.sendableethersliquity.sendlqty.md) |  | Send LQTY tokens to an address. |
 |  [sendLUSD(toAddress, amount, overrides)](./lib-ethers.sendableethersliquity.sendlusd.md) |  | Send aUSD tokens to an address. |
 |  [stakeLQTY(amount, overrides)](./lib-ethers.sendableethersliquity.stakelqty.md) |  | Stake LQTY to start earning fee revenue or increase existing stake. |
+|  [stakeLqty1LpTokens(amount, overrides)](./lib-ethers.sendableethersliquity.stakelqty1lptokens.md) |  | Stake Uniswap FTM/aUSD LP tokens to participate in liquidity mining and earn LQTY. |
 |  [stakeLqtyLpTokens(amount, overrides)](./lib-ethers.sendableethersliquity.stakelqtylptokens.md) |  | Stake Uniswap FTM/aUSD LP tokens to participate in liquidity mining and earn LQTY. |
 |  [stakeUniTokens(amount, overrides)](./lib-ethers.sendableethersliquity.stakeunitokens.md) |  | Stake Uniswap FTM/aUSD LP tokens to participate in liquidity mining and earn LQTY. |
 |  [transferCollateralGainToTrove(overrides)](./lib-ethers.sendableethersliquity.transfercollateralgaintotrove.md) |  | Transfer [collateral gain](./lib-base.stabilitydeposit.collateralgain.md) from Stability Deposit to Trove. |
 |  [unstakeLQTY(amount, overrides)](./lib-ethers.sendableethersliquity.unstakelqty.md) |  | Withdraw LQTY from staking. |
+|  [unstakeLqty1LpTokens(amount, overrides)](./lib-ethers.sendableethersliquity.unstakelqty1lptokens.md) |  | Withdraw Uniswap FTM/aUSD LP tokens from liquidity mining. |
 |  [unstakeLqtyLpTokens(amount, overrides)](./lib-ethers.sendableethersliquity.unstakelqtylptokens.md) |  | Withdraw Uniswap FTM/aUSD LP tokens from liquidity mining. |
 |  [unstakeUniTokens(amount, overrides)](./lib-ethers.sendableethersliquity.unstakeunitokens.md) |  | Withdraw Uniswap FTM/aUSD LP tokens from liquidity mining. |
 |  [withdrawCollateral(amount, overrides)](./lib-ethers.sendableethersliquity.withdrawcollateral.md) |  | Adjust existing Trove by withdrawing some of its collateral. |
 |  [withdrawGainsFromStabilityPool(overrides)](./lib-ethers.sendableethersliquity.withdrawgainsfromstabilitypool.md) |  | Withdraw [collateral gain](./lib-base.stabilitydeposit.collateralgain.md) and [LQTY reward](./lib-base.stabilitydeposit.lqtyreward.md) from Stability Deposit. |
 |  [withdrawGainsFromStaking(overrides)](./lib-ethers.sendableethersliquity.withdrawgainsfromstaking.md) |  | Withdraw [collateral gain](./lib-base.lqtystake.collateralgain.md) and [LUSD gain](./lib-base.lqtystake.lusdgain.md) from LQTY stake. |
+|  [withdrawLQTY1RewardFromLiquidityMining(overrides)](./lib-ethers.sendableethersliquity.withdrawlqty1rewardfromliquiditymining.md) |  | Withdraw LQTY that has been earned by mining liquidity. |
 |  [withdrawLQTYORewardFromLiquidityMining(overrides)](./lib-ethers.sendableethersliquity.withdrawlqtyorewardfromliquiditymining.md) |  | Withdraw LQTY that has been earned by mining liquidity. |
 |  [withdrawLQTYRewardFromLiquidityMining(overrides)](./lib-ethers.sendableethersliquity.withdrawlqtyrewardfromliquiditymining.md) |  | Withdraw LQTY that has been earned by mining liquidity. |
 |  [withdrawLUSDFromStabilityPool(amount, overrides)](./lib-ethers.sendableethersliquity.withdrawlusdfromstabilitypool.md) |  | Withdraw aUSD from Stability Deposit. |

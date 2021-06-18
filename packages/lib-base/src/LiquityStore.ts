@@ -37,11 +37,17 @@ export interface LiquityStoreBaseState {
   /** User's Uniswap FTM/aUSD LP token balance. */
   lqtyLpTokenBalance: Decimal;
 
+  /** User's Uniswap FTM/aUSD LP token balance. */
+  lqty1LpTokenBalance: Decimal;
+
   /** The liquidity mining contract's allowance of user's Uniswap FTM/aUSD LP tokens. */
   uniTokenAllowance: Decimal;
 
   /** The liquidity mining contract's allowance of user's Uniswap FTM/aUSD LP tokens. */
   lqtyLpTokenAllowance: Decimal;
+
+  /** The liquidity mining contract's allowance of user's Uniswap FTM/aUSD LP tokens. */
+  lqty1LpTokenAllowance: Decimal;
 
   /** Remaining AQU that will be collectively rewarded to liquidity miners. */
   remainingLiquidityMiningLQTYReward: Decimal;
@@ -49,11 +55,17 @@ export interface LiquityStoreBaseState {
   /** Remaining AQU that will be collectively rewarded to liquidity miners. */
   remainingLiquidityMiningLQTYOReward: Decimal;
 
+  /** Remaining AQU that will be collectively rewarded to liquidity miners. */
+  remainingLiquidityMiningLQTY1Reward: Decimal;
+
   /** Amount of Uniswap FTM/aUSD LP tokens the user has staked in liquidity mining. */
   liquidityMiningStake: Decimal;
 
   /** Amount of Uniswap FTM/aUSD LP tokens the user has staked in liquidity mining. */
   liquidityMiningStakeLqtyLp: Decimal;
+
+  /** Amount of Uniswap FTM/aUSD LP tokens the user has staked in liquidity mining. */
+  liquidityMiningStakeAusdLp: Decimal;
 
   /** Total amount of Uniswap FTM/aUSD LP tokens currently staked in liquidity mining. */
   totalStakedUniTokens: Decimal;
@@ -61,11 +73,17 @@ export interface LiquityStoreBaseState {
   /** Total amount of Uniswap FTM/aUSD LP tokens currently staked in liquidity mining. */
   totalStakedLqtyLpTokens: Decimal;
 
+  /** Total amount of Uniswap FTM/aUSD LP tokens currently staked in liquidity mining. */
+  totalStakedAusdLpTokens: Decimal;
+
   /** Amount of AQU the user has earned through mining liquidity. */
   liquidityMiningLQTYReward: Decimal;
 
   /** Amount of AQU the user has earned through mining liquidity. */
   liquidityMiningLQTYLpReward: Decimal;
+
+  /** Amount of AQU the user has earned through mining liquidity. */
+  liquidityMiningLQTY1LpReward: Decimal;
 
   /**
    * Amount of leftover collateral available for withdrawal to the user.
@@ -401,6 +419,13 @@ export abstract class LiquityStore<T = unknown> {
         baseStateUpdate.lqtyLpTokenBalance
       ),
 
+      lqty1LpTokenBalance: this._updateIfChanged(
+        eq,
+        "lqty1LpTokenBalance",
+        baseState.lqty1LpTokenBalance,
+        baseStateUpdate.lqty1LpTokenBalance
+      ),
+
       uniTokenAllowance: this._updateIfChanged(
         eq,
         "uniTokenAllowance",
@@ -415,6 +440,13 @@ export abstract class LiquityStore<T = unknown> {
         baseStateUpdate.lqtyLpTokenAllowance
       ),
 
+      lqty1LpTokenAllowance: this._updateIfChanged(
+        eq,
+        "lqty1LpTokenAllowance",
+        baseState.lqty1LpTokenAllowance,
+        baseStateUpdate.lqty1LpTokenAllowance
+      ),
+
       remainingLiquidityMiningLQTYReward: this._silentlyUpdateIfChanged(
         eq,
         baseState.remainingLiquidityMiningLQTYReward,
@@ -425,6 +457,12 @@ export abstract class LiquityStore<T = unknown> {
         eq,
         baseState.remainingLiquidityMiningLQTYOReward,
         baseStateUpdate.remainingLiquidityMiningLQTYOReward
+      ),
+
+      remainingLiquidityMiningLQTY1Reward: this._silentlyUpdateIfChanged(
+        eq,
+        baseState.remainingLiquidityMiningLQTY1Reward,
+        baseStateUpdate.remainingLiquidityMiningLQTY1Reward
       ),
 
       liquidityMiningStake: this._updateIfChanged(
@@ -441,6 +479,13 @@ export abstract class LiquityStore<T = unknown> {
         baseStateUpdate.liquidityMiningStakeLqtyLp
       ),
 
+      liquidityMiningStakeAusdLp: this._updateIfChanged(
+        eq,
+        "liquidityMiningStakeAusdLp",
+        baseState.liquidityMiningStakeAusdLp,
+        baseStateUpdate.liquidityMiningStakeAusdLp
+      ),
+
       totalStakedUniTokens: this._updateIfChanged(
         eq,
         "totalStakedUniTokens",
@@ -455,6 +500,13 @@ export abstract class LiquityStore<T = unknown> {
         baseStateUpdate.totalStakedLqtyLpTokens
       ),
 
+      totalStakedAusdLpTokens: this._updateIfChanged(
+        eq,
+        "totalStakedAusdLpTokens",
+        baseState.totalStakedAusdLpTokens,
+        baseStateUpdate.totalStakedAusdLpTokens
+      ),
+
       liquidityMiningLQTYReward: this._silentlyUpdateIfChanged(
         eq,
         baseState.liquidityMiningLQTYReward,
@@ -465,6 +517,12 @@ export abstract class LiquityStore<T = unknown> {
         eq,
         baseState.liquidityMiningLQTYLpReward,
         baseStateUpdate.liquidityMiningLQTYLpReward
+      ),
+
+      liquidityMiningLQTY1LpReward: this._silentlyUpdateIfChanged(
+        eq,
+        baseState.liquidityMiningLQTY1LpReward,
+        baseStateUpdate.liquidityMiningLQTY1LpReward
       ),
 
       collateralSurplusBalance: this._updateIfChanged(

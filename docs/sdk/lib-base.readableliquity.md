@@ -23,10 +23,14 @@ Implemented by [EthersLiquity](./lib-ethers.ethersliquity.md)<!-- -->.
 |  [getCollateralSurplusBalance(address)](./lib-base.readableliquity.getcollateralsurplusbalance.md) | Get the amount of leftover collateral available for withdrawal by an address. |
 |  [getFees()](./lib-base.readableliquity.getfees.md) | Get a calculator for current fees. |
 |  [getFrontendStatus(address)](./lib-base.readableliquity.getfrontendstatus.md) | Check whether an address is registered as a Aquarius frontend, and what its kickback rate is. |
+|  [getLiquidityMiningLQTY1LpReward(address)](./lib-base.readableliquity.getliquiditymininglqty1lpreward.md) | Get the amount of AQU earned by an address through mining liquidity. |
 |  [getLiquidityMiningLQTYLpReward(address)](./lib-base.readableliquity.getliquiditymininglqtylpreward.md) | Get the amount of AQU earned by an address through mining liquidity. |
 |  [getLiquidityMiningLQTYReward(address)](./lib-base.readableliquity.getliquiditymininglqtyreward.md) | Get the amount of AQU earned by an address through mining liquidity. |
 |  [getLiquidityMiningStake(address)](./lib-base.readableliquity.getliquidityminingstake.md) | Get the amount of Uniswap FTM/LUSD LP tokens currently staked by an address in liquidity mining. |
+|  [getLiquidityMiningStakeAusdLp(address)](./lib-base.readableliquity.getliquidityminingstakeausdlp.md) | Get the amount of Uniswap FTM/LUSD LP tokens currently staked by an address in liquidity mining. |
 |  [getLiquidityMiningStakeLqtyLp(address)](./lib-base.readableliquity.getliquidityminingstakelqtylp.md) | Get the amount of Uniswap FTM/LUSD LP tokens currently staked by an address in liquidity mining. |
+|  [getLqty1LpTokenAllowance(address)](./lib-base.readableliquity.getlqty1lptokenallowance.md) | Get the liquidity mining contract's allowance of a holder's Uniswap FTM/LUSD LP tokens. |
+|  [getLqty1LpTokenBalance(address)](./lib-base.readableliquity.getlqty1lptokenbalance.md) | Get the amount of Uniswap FTM/LUSD LP tokens held by an address. |
 |  [getLQTYBalance(address)](./lib-base.readableliquity.getlqtybalance.md) | Get the amount of AQU held by an address. |
 |  [getLqtyLpTokenAllowance(address)](./lib-base.readableliquity.getlqtylptokenallowance.md) | Get the liquidity mining contract's allowance of a holder's Uniswap FTM/LUSD LP tokens. |
 |  [getLqtyLpTokenBalance(address)](./lib-base.readableliquity.getlqtylptokenbalance.md) | Get the amount of Uniswap FTM/LUSD LP tokens held by an address. |
@@ -35,12 +39,14 @@ Implemented by [EthersLiquity](./lib-ethers.ethersliquity.md)<!-- -->.
 |  [getLUSDInStabilityPool()](./lib-base.readableliquity.getlusdinstabilitypool.md) | Get the total amount of aUSD currently deposited in the Stability Pool. |
 |  [getNumberOfTroves()](./lib-base.readableliquity.getnumberoftroves.md) | Get number of Troves that are currently open. |
 |  [getPrice()](./lib-base.readableliquity.getprice.md) | Get the current price of the native currency (e.g. Ether) in USD. |
+|  [getRemainingLiquidityMiningLQTY1Reward()](./lib-base.readableliquity.getremainingliquiditymininglqty1reward.md) | Get the remaining AQU that will be collectively rewarded to liquidity miners. |
 |  [getRemainingLiquidityMiningLQTYOReward()](./lib-base.readableliquity.getremainingliquiditymininglqtyoreward.md) | Get the remaining AQU that will be collectively rewarded to liquidity miners. |
 |  [getRemainingLiquidityMiningLQTYReward()](./lib-base.readableliquity.getremainingliquiditymininglqtyreward.md) | Get the remaining AQU that will be collectively rewarded to liquidity miners. |
 |  [getRemainingStabilityPoolLQTYReward()](./lib-base.readableliquity.getremainingstabilitypoollqtyreward.md) | Get the remaining AQU that will be collectively rewarded to stability depositors. |
 |  [getStabilityDeposit(address)](./lib-base.readableliquity.getstabilitydeposit.md) | Get the current state of a Stability Deposit. |
 |  [getTotal()](./lib-base.readableliquity.gettotal.md) | Get the total amount of collateral and debt in the Aquarius system. |
 |  [getTotalRedistributed()](./lib-base.readableliquity.gettotalredistributed.md) | Get the total collateral and debt per stake that has been liquidated through redistribution. |
+|  [getTotalStakedAusdLpTokens()](./lib-base.readableliquity.gettotalstakedausdlptokens.md) | Get the total amount of Uniswap FTM/LUSD LP tokens currently staked in liquidity mining. |
 |  [getTotalStakedLQTY()](./lib-base.readableliquity.gettotalstakedlqty.md) | Get the total amount of AQU currently staked. |
 |  [getTotalStakedLqtyLpTokens()](./lib-base.readableliquity.gettotalstakedlqtylptokens.md) | Get the total amount of Uniswap FTM/LUSD LP tokens currently staked in liquidity mining. |
 |  [getTotalStakedUniTokens()](./lib-base.readableliquity.gettotalstakedunitokens.md) | Get the total amount of Uniswap FTM/LUSD LP tokens currently staked in liquidity mining. |

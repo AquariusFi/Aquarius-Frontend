@@ -16,6 +16,23 @@ import { LiquityFrontend } from "./LiquityFrontend";
 if (window.ethereum) {
   // Silence MetaMask warning in console
   Object.assign(window.ethereum, { autoRefreshOnNetworkChange: false });
+
+  const paramsData = [{
+    chainId: '0xfa',
+    chainName: 'Fantom Chain',
+    nativeCurrency:
+    {
+      name: 'Fantom',
+      symbol: 'FTM',
+      decimals: 18
+    },
+    rpcUrls: ['https://rpcapi.fantom.network'],
+    blockExplorerUrls: ['https://ftmscan.com/'],
+  }];
+  
+  (window as any).ethereum.request({method: 'wallet_addEthereumChain', params:paramsData}).then(()=>{
+
+  }).catch()
 }
 
 if (process.env.REACT_APP_DEMO_MODE === "true") {

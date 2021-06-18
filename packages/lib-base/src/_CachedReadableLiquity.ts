@@ -143,6 +143,13 @@ export class _CachedReadableLiquity<T extends unknown[]>
     );
   }
 
+  async getLqty1LpTokenBalance(address?: string, ...extraParams: T): Promise<Decimal> {
+    return (
+      this._cache.getLqty1LpTokenBalance(address, ...extraParams) ??
+      this._readable.getLqty1LpTokenBalance(address, ...extraParams)
+    );
+  }
+
   async getUniTokenAllowance(address?: string, ...extraParams: T): Promise<Decimal> {
     return (
       this._cache.getUniTokenAllowance(address, ...extraParams) ??
@@ -154,6 +161,13 @@ export class _CachedReadableLiquity<T extends unknown[]>
     return (
       this._cache.getLqtyLpTokenAllowance(address, ...extraParams) ??
       this._readable.getLqtyLpTokenAllowance(address, ...extraParams)
+    );
+  }
+
+  async getLqty1LpTokenAllowance(address?: string, ...extraParams: T): Promise<Decimal> {
+    return (
+      this._cache.getLqty1LpTokenAllowance(address, ...extraParams) ??
+      this._readable.getLqty1LpTokenAllowance(address, ...extraParams)
     );
   }
 
@@ -171,6 +185,13 @@ export class _CachedReadableLiquity<T extends unknown[]>
     );
   }
 
+  async getRemainingLiquidityMiningLQTY1Reward(...extraParams: T): Promise<Decimal> {
+    return (
+      this._cache.getRemainingLiquidityMiningLQTY1Reward(...extraParams) ??
+      this._readable.getRemainingLiquidityMiningLQTY1Reward(...extraParams)
+    );
+  }
+
   async getLiquidityMiningStake(address?: string, ...extraParams: T): Promise<Decimal> {
     return (
       this._cache.getLiquidityMiningStake(address, ...extraParams) ??
@@ -182,6 +203,13 @@ export class _CachedReadableLiquity<T extends unknown[]>
     return (
       this._cache.getLiquidityMiningStakeLqtyLp(address, ...extraParams) ??
       this._readable.getLiquidityMiningStakeLqtyLp(address, ...extraParams)
+    );
+  }
+
+  async getLiquidityMiningStakeAusdLp(address?: string, ...extraParams: T): Promise<Decimal> {
+    return (
+      this._cache.getLiquidityMiningStakeAusdLp(address, ...extraParams) ??
+      this._readable.getLiquidityMiningStakeAusdLp(address, ...extraParams)
     );
   }
 
@@ -199,6 +227,13 @@ export class _CachedReadableLiquity<T extends unknown[]>
     );
   }
 
+  async getTotalStakedAusdLpTokens(...extraParams: T): Promise<Decimal> {
+    return (
+      this._cache.getTotalStakedAusdLpTokens(...extraParams) ??
+      this._readable.getTotalStakedAusdLpTokens(...extraParams)
+    );
+  }
+
   async getLiquidityMiningLQTYReward(address?: string, ...extraParams: T): Promise<Decimal> {
     return (
       this._cache.getLiquidityMiningLQTYReward(address, ...extraParams) ??
@@ -210,6 +245,13 @@ export class _CachedReadableLiquity<T extends unknown[]>
     return (
       this._cache.getLiquidityMiningLQTYLpReward(address, ...extraParams) ??
       this._readable.getLiquidityMiningLQTYLpReward(address, ...extraParams)
+    );
+  }
+
+  async getLiquidityMiningLQTY1LpReward(address?: string, ...extraParams: T): Promise<Decimal> {
+    return (
+      this._cache.getLiquidityMiningLQTY1LpReward(address, ...extraParams) ??
+      this._readable.getLiquidityMiningLQTY1LpReward(address, ...extraParams)
     );
   }
 
